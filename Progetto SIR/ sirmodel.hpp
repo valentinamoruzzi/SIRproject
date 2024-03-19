@@ -1,8 +1,9 @@
 #ifndef sirmodel_HPP
 #define sirmodel_HPP
+
 #include "sirdata.hpp"
 #include <vector>
-#include <iostream>
+
 
 using namespace std;
 

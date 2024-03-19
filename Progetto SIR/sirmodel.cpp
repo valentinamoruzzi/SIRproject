@@ -1,5 +1,5 @@
 #include "sirdata.hpp"
-#include "sirmodel.hpp"
+#include "include/sirmodel.hpp"
 #include <iostream>
 #include <vector>
 #include <iostream>
@@ -49,20 +49,20 @@ vector <sirdata> generate_data(int duration) {
         cout << "Tempo =:"<< endl;
         cout << "S:"<< state->get_susc()<< endl;
         cout <<"I:"<< state ->get_inf() << endl;
-        cout << "R:" << state ->get_rim() << endl;
+        cout << "R:" << state ->get_rec() << endl;
 
-        const int pop_n = state ->getPop(); //noe
+        const int pop_now = state ->getPop(); //now
         for (int i = 0; i < duration; i++ ){
 
             sirdata *state_i = &result.back();
-            int newinf = round(beta/pop_n * state_i ->get_susc()* state_i ->get_inf());
+            int newinf = round((beta/pop_now) * state_i ->get_susc()* state_i ->get_inf());
             int newrec = (int)(gamma*state_i ->get_inf());
 
             state_i -> set_susc(state_i -> get_susc()- newinf);
-           // state_i -> set_susc(state_i -> get_susc()- newinf);
-            // state_i -> set_susc(state_i -> get_susc()- newinf);
+            state_i -> set_inf(state_i -> get_inf() + newinf - newrec); //riguarda 
+            state_i -> set_rec(state_i ->get_rec() + newrec);
 
-            // stampo e checkpop.
+             //stampo e checkpop.
 
 
 
