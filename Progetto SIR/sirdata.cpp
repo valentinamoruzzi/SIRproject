@@ -4,47 +4,54 @@
 
 using namespace std;
 
- sirdata::sirdata(int suscettibili, int infetti, int rimossi){
+ sirdata::sirdata(int susceptibles, int infected, int recovered){
         
-        set_susc(suscettibili);
-        set_inf(infetti);
-        set_rim(rimossi);
-        set_pop(suscettibili+ infetti+ rimossi);
+        set_susc(susceptibles);
+        set_inf(infected);
+        set_rec(recovered);
+        set_pop(susceptibles + infected + recovered);
     }
 
 int sirdata::get_susc() {return susc;}
-void sirdata::set_susc(const int suscettibili) {
+void sirdata::set_susc(const int susceptibles) {
     
-    if (suscettibili < 0) 
-        throw "Errore suscettibili minore di 0";
+    if (susceptibles < 0) 
+        throw "Error: susceptibles less than 0";
     else 
-        susc = suscettibili;}
+        susc = susceptibles;}
 
 int sirdata::get_inf() {return inf;}
-void sirdata::set_inf(const int infetti) {
-       if (infetti < 0) 
-        throw "Errore infetti minore di 0";
+void sirdata::set_inf(const int infected) {
+       if (infected < 0) 
+        throw "Error: infected less than 0";
     else 
-        inf = infetti;}
+        inf = infected;}
 
-int sirdata::get_rim() {return rim;}
-void sirdata::set_rim(const int rimossi) {
-       if (rimossi < 0) 
-        throw "Errore rimosssi minore di 0";
+int sirdata::get_rec() {return rec;}
+void sirdata::set_rec(const int recovered) {
+       if (recovered < 0) 
+        throw "Error: recovered less than 0";
     else 
-        rim = rimossi;}
+        rec = recovered;}
 
 int sirdata::get_pop() {return pop;}
 void sirdata::set_pop(int population) {
        if (population < 0) 
-        throw "Errore popolazione minore di 0";
+        throw "Error: population less than 0";
     else 
         pop = population;}
 
 bool sirdata::check_pop(){
 
-    if (pop == susc + inf + rim) 
+    if (pop == susc + inf + rec) 
     return true;
     else 
     return false;
+}
+
+void sirdata::toString() {
+    
+    cout << "S:"<< get_susc()<< endl;
+    cout <<"I:"<< get_inf() << endl;
+    cout << "R:" << get_rec() << endl;
 }

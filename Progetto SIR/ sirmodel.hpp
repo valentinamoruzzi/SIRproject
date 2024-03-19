@@ -24,7 +24,7 @@ class sirmodel {
     void set_beta(const double b);
     double get_gamma();
     void set_gamma(const double g);
-    vector <sirdata> generate_data(int duration);
+    vector<sirdata> generate_data(int duration);
 
 
 
