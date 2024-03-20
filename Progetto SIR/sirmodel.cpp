@@ -62,10 +62,12 @@ vector <sirdata> generate_data(int duration) {
             state_i -> set_inf(state_i -> get_inf() + newinf - newrec); //riguarda 
             state_i -> set_rec(state_i ->get_rec() + newrec);
 
-             //stampo e checkpop.
+            cout << "Tempo " << i+1 << endl;
+            state->toString();
 
-
-
+        if(!state->checkPop())
+            throw "Errore: valore popolazione non corrisponde alla somma di s,r,i!";
+        result.push_back(*state);
 
         }
     }
