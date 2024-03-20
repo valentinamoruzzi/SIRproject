@@ -1,5 +1,4 @@
 #include "sirdata.hpp"
-#include <cmath>
 #include <iostream>
 
 using namespace std;
@@ -13,31 +12,31 @@ using namespace std;
     }
 
 int sirdata::get_susc() {return susc;}
-void sirdata::set_susc(const int susceptibles) {
+void sirdata::set_susc( int susceptibles) {
     
     if (susceptibles < 0) 
-        throw "Error: susceptibles less than 0";
+        throw "Error: susceptibles less than 0\n";
     else 
         susc = susceptibles;}
 
 int sirdata::get_inf() {return inf;}
-void sirdata::set_inf(const int infected) {
+void sirdata::set_inf( int infected) {
        if (infected < 0) 
-        throw "Error: infected less than 0";
+        throw "Error: infected less than 0\n";
     else 
         inf = infected;}
 
 int sirdata::get_rec() {return rec;}
-void sirdata::set_rec(const int recovered) {
+void sirdata::set_rec( int recovered) {
        if (recovered < 0) 
-        throw "Error: recovered less than 0";
+        throw "Error: recovered less than 0\n";
     else 
         rec = recovered;}
 
 int sirdata::get_pop() {return pop;}
 void sirdata::set_pop(int population) {
        if (population < 0) 
-        throw "Error: population less than 0";
+        throw "Error: population less than 0\n";
     else 
         pop = population;}
 

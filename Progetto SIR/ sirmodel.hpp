@@ -4,20 +4,19 @@
 #include "sirdata.hpp"
 #include <vector>
 
-
 using namespace std;
 
 
 class sirmodel {
-    private:
+private:
     sirdata *state;
     double beta;
     double gamma;
 
-    public:
+public:
     sirmodel ();
-    sirmodel (const double b, const double g);
-    sirmodel (sirdata *state, const double b, const double g);
+    sirmodel ( double b, double g);
+    sirmodel (sirdata *state, double b, double g);
     sirdata* get_state();
     void set_state(sirdata *s);
     double get_beta();
@@ -26,10 +25,5 @@ class sirmodel {
     void set_gamma(const double g);
     vector<sirdata> generate_data(int duration);
 
-
-
 };
-
-
-
 #endif

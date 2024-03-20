@@ -1,5 +1,5 @@
 #include "sirdata.hpp"
-#include "include/sirmodel.hpp"
+#include "sirmodel.hpp"
 #include <iostream>
 #include <vector>
 #include <iostream>
