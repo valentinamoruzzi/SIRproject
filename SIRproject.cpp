@@ -1,8 +1,8 @@
 #include <iostream>
 #include<string>
 #include<cmath>
-#include "sirdata.hpp"
-#include "sirmodel.hpp"
+#include"sirdata.hpp"
+#include"sir_model.hpp"
 
 #include <cstdio>
 #include <cstring>

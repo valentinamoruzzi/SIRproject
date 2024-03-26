@@ -1,5 +1,5 @@
 #include "sirdata.hpp"
-#include "sirmodel.hpp"
+#include "sir_model.hpp"
 #include <iostream>
 #include <vector>
 #include <iostream>
@@ -17,41 +17,42 @@ sirmodel::sirmodel (const double b, const double g){
 }
 
 sirmodel::sirmodel (sirdata *state, const double b, const double g){
-    set_state(sirdata *state);
+    set_state(state);
     set_beta(b);
     set_gamma(g);
 }
 
-sirmodel::sirdata* get_state() {return state;}
-sirmodel::void set_state(sirdata *s)        
-    {if (s = NULL)
+sirdata* sirmodel::get_state() {return state;}
+void sirmodel::set_state(sirdata *s)        
+    {if (s == NULL)
         throw "Errore state";
-    else s = state;
+    else state = s;
     }
-double get_beta() {return beta;}
-void set_beta(const double b) {if (b < 0 && b>1)
+double sirmodel::get_beta() {return beta;}
+void sirmodel::set_beta(const double b) 
+{if (b < 0 && b>1)
         throw "Errore beta";
     else 
-        b = beta;
+        beta = b;
     }
-double get_gamma() {return gamma;}
-void set_gamma(const double g)
+double sirmodel::get_gamma() {return gamma;}
+void sirmodel::set_gamma(const double g)
     {if (g < 0 && g>1)
         throw "Errore gamma";
     else 
-        g = gamma;
+        gamma = g;
     }
-vector <sirdata> generate_data(int duration) {
-    vector<sirdata> result = NULL;
-    if (state =! NULL)
+vector<sirdata> sirmodel::generate_data(int duration) {
+    vector<sirdata> result;
+    if (state != NULL)
     {
-        result.push_back(*state) // serve l'asterisco perché solo state è gia un puntatore
+        result.push_back(*state); // serve l'asterisco perché solo state è gia un puntatore
         cout << "Tempo =:"<< endl;
         cout << "S:"<< state->get_susc()<< endl;
         cout <<"I:"<< state ->get_inf() << endl;
         cout << "R:" << state ->get_rec() << endl;
 
-        const int pop_now = state ->getPop(); //now
+        const int pop_now = state ->get_pop(); //now
         for (int i = 0; i < duration; i++ ){
 
             sirdata *state_i = &result.back();
@@ -65,7 +66,7 @@ vector <sirdata> generate_data(int duration) {
             cout << "Tempo " << i+1 << endl;
             state->toString();
 
-        if(!state->checkPop())
+        if(!state->check_pop())
             throw "Errore: valore popolazione non corrisponde alla somma di s,r,i!";
         result.push_back(*state);
 
