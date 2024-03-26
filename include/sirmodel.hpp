@@ -1,5 +1,5 @@
-#ifndef sir_model_HPP
-#define sir_model_HPP
+#ifndef sirmodel_HPP
+#define sirmodel_HPP
 
 #include "sirdata.hpp"
 #include <vector>

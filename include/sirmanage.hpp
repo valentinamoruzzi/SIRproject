@@ -5,7 +5,7 @@
 
 using namespace std;
 
-namespace sir_model {
+namespace sirmodel {
 class sirmanage{
     private:
     string in_filepath;

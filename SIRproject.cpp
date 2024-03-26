@@ -2,7 +2,7 @@
 #include<string>
 #include<cmath>
 #include"sirdata.hpp"
-#include"sir_model.hpp"
+#include"sirmodel.hpp"
 
 #include <cstdio>
 #include <cstring>
