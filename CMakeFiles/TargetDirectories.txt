@@ -1,0 +1,3 @@
+/Users/valentinamoruzzi/Documents/GitHub/SIRproject/CMakeFiles/sir.dir
+/Users/valentinamoruzzi/Documents/GitHub/SIRproject/CMakeFiles/edit_cache.dir
+/Users/valentinamoruzzi/Documents/GitHub/SIRproject/CMakeFiles/rebuild_cache.dir
