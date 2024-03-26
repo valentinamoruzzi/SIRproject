@@ -149,7 +149,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=sir
+CMAKE_PROJECT_NAME:STATIC=SIRproject
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=0.1.0
@@ -271,15 +271,6 @@ SIRproject_SOURCE_DIR:STATIC=/Users/valentinamoruzzi/Documents/GitHub/SIRproject
 //Name of the computer/site where compile is being run
 SITE:STRING=Valentina.station
 
-//Value Computed by CMake
-sir_BINARY_DIR:STATIC=/Users/valentinamoruzzi/Documents/GitHub/SIRproject
-
-//Value Computed by CMake
-sir_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-sir_SOURCE_DIR:STATIC=/Users/valentinamoruzzi/Documents/GitHub/SIRproject
-
 
 ########################
 # INTERNAL cache entries
@@ -303,6 +294,8 @@ CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 CMAKE_COMMAND:INTERNAL=/usr/local/Cellar/cmake/3.27.9/bin/cmake
 //Path to cpack program executable.
 CMAKE_CPACK_COMMAND:INTERNAL=/usr/local/Cellar/cmake/3.27.9/bin/cpack
+//ADVANCED property for variable: CMAKE_CTEST_COMMAND
+CMAKE_CTEST_COMMAND-ADVANCED:INTERNAL=1
 //Path to ctest program executable.
 CMAKE_CTEST_COMMAND:INTERNAL=/usr/local/Cellar/cmake/3.27.9/bin/ctest
 //ADVANCED property for variable: CMAKE_CXX_COMPILER

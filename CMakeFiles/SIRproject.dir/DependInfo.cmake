@@ -9,8 +9,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/valentinamoruzzi/Documents/GitHub/SIRproject/SIRproject.cpp" "CMakeFiles/SIRproject.dir/SIRproject.cpp.o" "gcc" "CMakeFiles/SIRproject.dir/SIRproject.cpp.o.d"
+  "/Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sir_model.cpp" "CMakeFiles/SIRproject.dir/src/sir_model.cpp.o" "gcc" "CMakeFiles/SIRproject.dir/src/sir_model.cpp.o.d"
   "/Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirdata.cpp" "CMakeFiles/SIRproject.dir/src/sirdata.cpp.o" "gcc" "CMakeFiles/SIRproject.dir/src/sirdata.cpp.o.d"
-  "/Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodel.cpp" "CMakeFiles/SIRproject.dir/src/sirmodel.cpp.o" "gcc" "CMakeFiles/SIRproject.dir/src/sirmodel.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

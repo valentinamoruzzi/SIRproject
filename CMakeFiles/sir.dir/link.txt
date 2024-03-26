@@ -1,1 +1,0 @@
-g++  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/sir.dir/src/sir_model.cpp.o CMakeFiles/sir.dir/src/sirdata.cpp.o CMakeFiles/sir.dir/SIRproject.cpp.o -o sir 

@@ -69,38 +69,10 @@ include CMakeFiles/SIRproject.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/SIRproject.dir/flags.make
 
-CMakeFiles/SIRproject.dir/src/sirdata.cpp.o: CMakeFiles/SIRproject.dir/flags.make
-CMakeFiles/SIRproject.dir/src/sirdata.cpp.o: src/sirdata.cpp
-CMakeFiles/SIRproject.dir/src/sirdata.cpp.o: CMakeFiles/SIRproject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/valentinamoruzzi/Documents/GitHub/SIRproject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SIRproject.dir/src/sirdata.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SIRproject.dir/src/sirdata.cpp.o -MF CMakeFiles/SIRproject.dir/src/sirdata.cpp.o.d -o CMakeFiles/SIRproject.dir/src/sirdata.cpp.o -c /Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirdata.cpp
-
-CMakeFiles/SIRproject.dir/src/sirdata.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SIRproject.dir/src/sirdata.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirdata.cpp > CMakeFiles/SIRproject.dir/src/sirdata.cpp.i
-
-CMakeFiles/SIRproject.dir/src/sirdata.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SIRproject.dir/src/sirdata.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirdata.cpp -o CMakeFiles/SIRproject.dir/src/sirdata.cpp.s
-
-CMakeFiles/SIRproject.dir/src/sirmodel.cpp.o: CMakeFiles/SIRproject.dir/flags.make
-CMakeFiles/SIRproject.dir/src/sirmodel.cpp.o: src/sirmodel.cpp
-CMakeFiles/SIRproject.dir/src/sirmodel.cpp.o: CMakeFiles/SIRproject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/valentinamoruzzi/Documents/GitHub/SIRproject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SIRproject.dir/src/sirmodel.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SIRproject.dir/src/sirmodel.cpp.o -MF CMakeFiles/SIRproject.dir/src/sirmodel.cpp.o.d -o CMakeFiles/SIRproject.dir/src/sirmodel.cpp.o -c /Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodel.cpp
-
-CMakeFiles/SIRproject.dir/src/sirmodel.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SIRproject.dir/src/sirmodel.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodel.cpp > CMakeFiles/SIRproject.dir/src/sirmodel.cpp.i
-
-CMakeFiles/SIRproject.dir/src/sirmodel.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SIRproject.dir/src/sirmodel.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodel.cpp -o CMakeFiles/SIRproject.dir/src/sirmodel.cpp.s
-
 CMakeFiles/SIRproject.dir/SIRproject.cpp.o: CMakeFiles/SIRproject.dir/flags.make
 CMakeFiles/SIRproject.dir/SIRproject.cpp.o: SIRproject.cpp
 CMakeFiles/SIRproject.dir/SIRproject.cpp.o: CMakeFiles/SIRproject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/valentinamoruzzi/Documents/GitHub/SIRproject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SIRproject.dir/SIRproject.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/valentinamoruzzi/Documents/GitHub/SIRproject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SIRproject.dir/SIRproject.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SIRproject.dir/SIRproject.cpp.o -MF CMakeFiles/SIRproject.dir/SIRproject.cpp.o.d -o CMakeFiles/SIRproject.dir/SIRproject.cpp.o -c /Users/valentinamoruzzi/Documents/GitHub/SIRproject/SIRproject.cpp
 
 CMakeFiles/SIRproject.dir/SIRproject.cpp.i: cmake_force
@@ -111,18 +83,46 @@ CMakeFiles/SIRproject.dir/SIRproject.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SIRproject.dir/SIRproject.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/valentinamoruzzi/Documents/GitHub/SIRproject/SIRproject.cpp -o CMakeFiles/SIRproject.dir/SIRproject.cpp.s
 
+CMakeFiles/SIRproject.dir/src/sirdata.cpp.o: CMakeFiles/SIRproject.dir/flags.make
+CMakeFiles/SIRproject.dir/src/sirdata.cpp.o: src/sirdata.cpp
+CMakeFiles/SIRproject.dir/src/sirdata.cpp.o: CMakeFiles/SIRproject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/valentinamoruzzi/Documents/GitHub/SIRproject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SIRproject.dir/src/sirdata.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SIRproject.dir/src/sirdata.cpp.o -MF CMakeFiles/SIRproject.dir/src/sirdata.cpp.o.d -o CMakeFiles/SIRproject.dir/src/sirdata.cpp.o -c /Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirdata.cpp
+
+CMakeFiles/SIRproject.dir/src/sirdata.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SIRproject.dir/src/sirdata.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirdata.cpp > CMakeFiles/SIRproject.dir/src/sirdata.cpp.i
+
+CMakeFiles/SIRproject.dir/src/sirdata.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SIRproject.dir/src/sirdata.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirdata.cpp -o CMakeFiles/SIRproject.dir/src/sirdata.cpp.s
+
+CMakeFiles/SIRproject.dir/src/sir_model.cpp.o: CMakeFiles/SIRproject.dir/flags.make
+CMakeFiles/SIRproject.dir/src/sir_model.cpp.o: src/sir_model.cpp
+CMakeFiles/SIRproject.dir/src/sir_model.cpp.o: CMakeFiles/SIRproject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/valentinamoruzzi/Documents/GitHub/SIRproject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SIRproject.dir/src/sir_model.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SIRproject.dir/src/sir_model.cpp.o -MF CMakeFiles/SIRproject.dir/src/sir_model.cpp.o.d -o CMakeFiles/SIRproject.dir/src/sir_model.cpp.o -c /Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sir_model.cpp
+
+CMakeFiles/SIRproject.dir/src/sir_model.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SIRproject.dir/src/sir_model.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sir_model.cpp > CMakeFiles/SIRproject.dir/src/sir_model.cpp.i
+
+CMakeFiles/SIRproject.dir/src/sir_model.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SIRproject.dir/src/sir_model.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sir_model.cpp -o CMakeFiles/SIRproject.dir/src/sir_model.cpp.s
+
 # Object files for target SIRproject
 SIRproject_OBJECTS = \
+"CMakeFiles/SIRproject.dir/SIRproject.cpp.o" \
 "CMakeFiles/SIRproject.dir/src/sirdata.cpp.o" \
-"CMakeFiles/SIRproject.dir/src/sirmodel.cpp.o" \
-"CMakeFiles/SIRproject.dir/SIRproject.cpp.o"
+"CMakeFiles/SIRproject.dir/src/sir_model.cpp.o"
 
 # External object files for target SIRproject
 SIRproject_EXTERNAL_OBJECTS =
 
-SIRproject: CMakeFiles/SIRproject.dir/src/sirdata.cpp.o
-SIRproject: CMakeFiles/SIRproject.dir/src/sirmodel.cpp.o
 SIRproject: CMakeFiles/SIRproject.dir/SIRproject.cpp.o
+SIRproject: CMakeFiles/SIRproject.dir/src/sirdata.cpp.o
+SIRproject: CMakeFiles/SIRproject.dir/src/sir_model.cpp.o
 SIRproject: CMakeFiles/SIRproject.dir/build.make
 SIRproject: CMakeFiles/SIRproject.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/valentinamoruzzi/Documents/GitHub/SIRproject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable SIRproject"
