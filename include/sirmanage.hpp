@@ -1,7 +1,7 @@
 #ifndef sirmanage_HPP
 #define sirmanage_HPP
 #include <string>
-#include "SirData.hpp"
+#include "sirdata.hpp"
 
 using namespace std;
 
