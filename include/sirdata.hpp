@@ -20,6 +20,7 @@ class sirdata {
     int get_pop();
     bool check_pop();
     void toString();
+    bool operator == (sirdata d);
     
 };
 
