@@ -6,17 +6,19 @@
 
 using namespace std;
 
+namespace sirmodel {
+
 sirmodel::sirmodel (){
-    set_beta(0.5);
-    set_gamma(0.5);
+    set_beta(BETA_DEFAULT);
+    set_gamma(GAMMA_DEFAULT);
 }
 
-sirmodel::sirmodel (const double b, const double g){
+sirmodel::sirmodel ( double b, double g){
     set_beta(b);
     set_gamma(g);
 }
 
-sirmodel::sirmodel (sirdata *state, const double b, const double g){
+sirmodel::sirmodel (sirdata *state, double b, double g){
     set_state(state);
     set_beta(b);
     set_gamma(g);
@@ -25,20 +27,20 @@ sirmodel::sirmodel (sirdata *state, const double b, const double g){
 sirdata* sirmodel::get_state() {return state;}
 void sirmodel::set_state(sirdata *s)        
     {if (s == NULL)
-        throw "Errore state";
+        throw "Error: state empty"; //stato nullo
     else state = s;
     }
 double sirmodel::get_beta() {return beta;}
 void sirmodel::set_beta(const double b) 
 {if (b < 0 && b>1)
-        throw "Errore beta";
+        throw "Error: the value of beta is not correct";
     else 
         beta = b;
     }
 double sirmodel::get_gamma() {return gamma;}
 void sirmodel::set_gamma(const double g)
     {if (g < 0 && g>1)
-        throw "Errore gamma";
+        throw "Error: the value of gamma is not correct";
     else 
         gamma = g;
     }
@@ -73,5 +75,6 @@ vector<sirdata> sirmodel::generate_data(int duration) {
         }
     }
 return result;
+}
 }
     

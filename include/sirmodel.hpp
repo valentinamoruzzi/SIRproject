@@ -4,12 +4,14 @@
 #include "sirdata.hpp"
 #include <vector>
 
+#define BETA_DEFAULT 0.6
+#define GAMMA_DEFAULT 0.1
+
 using namespace std;
-
-
+namespace sirmodel{
 class sirmodel {
 private:
-    sirdata *state;
+    sirdata *state = NULL;
     double beta;
     double gamma;
 
@@ -26,4 +28,5 @@ public:
     vector<sirdata> generate_data(int duration);
 
 };
+}
 #endif
