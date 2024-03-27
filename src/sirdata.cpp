@@ -3,7 +3,7 @@
 
 using namespace std;
 
-namespace sirmodel {
+
  sirdata::sirdata(int susceptibles, int infected, int recovered){
         
         set_susc(susceptibles);
@@ -59,5 +59,4 @@ void sirdata::toString() {
 bool sirdata::operator == (sirdata d) {
     if(d.get_susc() == get_susc() && d.get_inf() == get_inf() && d.get_rec() == d.get_rec()) return true;
     else return false;
-}
 }

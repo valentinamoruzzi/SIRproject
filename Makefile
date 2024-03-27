@@ -527,30 +527,6 @@ SIRproject.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIRproject.dir/build.make CMakeFiles/SIRproject.dir/SIRproject.cpp.s
 .PHONY : SIRproject.cpp.s
 
-src/sir_model.o: src/sir_model.cpp.o
-.PHONY : src/sir_model.o
-
-# target to build an object file
-src/sir_model.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIRproject.dir/build.make CMakeFiles/SIRproject.dir/src/sir_model.cpp.o
-.PHONY : src/sir_model.cpp.o
-
-src/sir_model.i: src/sir_model.cpp.i
-.PHONY : src/sir_model.i
-
-# target to preprocess a source file
-src/sir_model.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIRproject.dir/build.make CMakeFiles/SIRproject.dir/src/sir_model.cpp.i
-.PHONY : src/sir_model.cpp.i
-
-src/sir_model.s: src/sir_model.cpp.s
-.PHONY : src/sir_model.s
-
-# target to generate assembly for a file
-src/sir_model.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIRproject.dir/build.make CMakeFiles/SIRproject.dir/src/sir_model.cpp.s
-.PHONY : src/sir_model.cpp.s
-
 src/sirdata.o: src/sirdata.cpp.o
 .PHONY : src/sirdata.o
 
@@ -574,6 +550,78 @@ src/sirdata.s: src/sirdata.cpp.s
 src/sirdata.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIRproject.dir/build.make CMakeFiles/SIRproject.dir/src/sirdata.cpp.s
 .PHONY : src/sirdata.cpp.s
+
+src/sirmanage.o: src/sirmanage.cpp.o
+.PHONY : src/sirmanage.o
+
+# target to build an object file
+src/sirmanage.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIRproject.dir/build.make CMakeFiles/SIRproject.dir/src/sirmanage.cpp.o
+.PHONY : src/sirmanage.cpp.o
+
+src/sirmanage.i: src/sirmanage.cpp.i
+.PHONY : src/sirmanage.i
+
+# target to preprocess a source file
+src/sirmanage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIRproject.dir/build.make CMakeFiles/SIRproject.dir/src/sirmanage.cpp.i
+.PHONY : src/sirmanage.cpp.i
+
+src/sirmanage.s: src/sirmanage.cpp.s
+.PHONY : src/sirmanage.s
+
+# target to generate assembly for a file
+src/sirmanage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIRproject.dir/build.make CMakeFiles/SIRproject.dir/src/sirmanage.cpp.s
+.PHONY : src/sirmanage.cpp.s
+
+src/sirmodel.o: src/sirmodel.cpp.o
+.PHONY : src/sirmodel.o
+
+# target to build an object file
+src/sirmodel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIRproject.dir/build.make CMakeFiles/SIRproject.dir/src/sirmodel.cpp.o
+.PHONY : src/sirmodel.cpp.o
+
+src/sirmodel.i: src/sirmodel.cpp.i
+.PHONY : src/sirmodel.i
+
+# target to preprocess a source file
+src/sirmodel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIRproject.dir/build.make CMakeFiles/SIRproject.dir/src/sirmodel.cpp.i
+.PHONY : src/sirmodel.cpp.i
+
+src/sirmodel.s: src/sirmodel.cpp.s
+.PHONY : src/sirmodel.s
+
+# target to generate assembly for a file
+src/sirmodel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIRproject.dir/build.make CMakeFiles/SIRproject.dir/src/sirmodel.cpp.s
+.PHONY : src/sirmodel.cpp.s
+
+src/sirmodelextended.o: src/sirmodelextended.cpp.o
+.PHONY : src/sirmodelextended.o
+
+# target to build an object file
+src/sirmodelextended.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIRproject.dir/build.make CMakeFiles/SIRproject.dir/src/sirmodelextended.cpp.o
+.PHONY : src/sirmodelextended.cpp.o
+
+src/sirmodelextended.i: src/sirmodelextended.cpp.i
+.PHONY : src/sirmodelextended.i
+
+# target to preprocess a source file
+src/sirmodelextended.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIRproject.dir/build.make CMakeFiles/SIRproject.dir/src/sirmodelextended.cpp.i
+.PHONY : src/sirmodelextended.cpp.i
+
+src/sirmodelextended.s: src/sirmodelextended.cpp.s
+.PHONY : src/sirmodelextended.s
+
+# target to generate assembly for a file
+src/sirmodelextended.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIRproject.dir/build.make CMakeFiles/SIRproject.dir/src/sirmodelextended.cpp.s
+.PHONY : src/sirmodelextended.cpp.s
 
 # Help Target
 help:
@@ -616,12 +664,18 @@ help:
 	@echo "... SIRproject.o"
 	@echo "... SIRproject.i"
 	@echo "... SIRproject.s"
-	@echo "... src/sir_model.o"
-	@echo "... src/sir_model.i"
-	@echo "... src/sir_model.s"
 	@echo "... src/sirdata.o"
 	@echo "... src/sirdata.i"
 	@echo "... src/sirdata.s"
+	@echo "... src/sirmanage.o"
+	@echo "... src/sirmanage.i"
+	@echo "... src/sirmanage.s"
+	@echo "... src/sirmodel.o"
+	@echo "... src/sirmodel.i"
+	@echo "... src/sirmodel.s"
+	@echo "... src/sirmodelextended.o"
+	@echo "... src/sirmodelextended.i"
+	@echo "... src/sirmodelextended.s"
 .PHONY : help
 
 

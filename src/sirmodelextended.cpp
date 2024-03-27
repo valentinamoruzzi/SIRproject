@@ -6,12 +6,12 @@ using namespace std;
 namespace sirmodel{
     sirmodelextended::sirmodelextended(){
 
-        set_delta(ALFA_DEFAULT);
+        set_alpha(ALPHA_DEFAULT);
     }
 
     sirmodelextended::sirmodelextended(double a) {
 
-        set_delta(d);
+        set_alpha(a);
 
     }
 
@@ -19,11 +19,11 @@ namespace sirmodel{
 
         set_beta(b);
         set_gamma(g);
-        set_alfa(a)
+        set_alpha(a);
     }
 
-    double sirmodelextended::get_alfa() {return alfa};
-    void sirmodelextended::set_alfa(double a)
+    double sirmodelextended::get_alpha() {return alpha;}
+    void sirmodelextended::set_alpha(double a)
     {if (a < 0 && a>1)
         throw "Error: the value of alpha is not correct";
     else 
@@ -45,8 +45,8 @@ namespace sirmodel{
 
             sirdata *state_i = &result.back();
             int newinf = round((beta/pop_now) * state_i ->get_susc()* state_i ->get_inf());
-            int newrec = (int)(gamma*state_i ->get_inf());
-            int newsusc = (int)(alfa * state_i ->get_rec();) 
+            int newrec = (int)(gamma * state_i ->get_inf());
+            int newsusc = (int)(alpha * state_i ->get_rec()); 
 
             state_i -> set_susc(state_i -> get_susc()- newinf + newsusc);
             state_i -> set_inf(state_i -> get_inf() + newinf - newrec); //riguarda 

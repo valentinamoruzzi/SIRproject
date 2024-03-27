@@ -1,10 +1,14 @@
 file(REMOVE_RECURSE
   "CMakeFiles/SIRproject.dir/SIRproject.cpp.o"
   "CMakeFiles/SIRproject.dir/SIRproject.cpp.o.d"
-  "CMakeFiles/SIRproject.dir/src/sir_model.cpp.o"
-  "CMakeFiles/SIRproject.dir/src/sir_model.cpp.o.d"
   "CMakeFiles/SIRproject.dir/src/sirdata.cpp.o"
   "CMakeFiles/SIRproject.dir/src/sirdata.cpp.o.d"
+  "CMakeFiles/SIRproject.dir/src/sirmanage.cpp.o"
+  "CMakeFiles/SIRproject.dir/src/sirmanage.cpp.o.d"
+  "CMakeFiles/SIRproject.dir/src/sirmodel.cpp.o"
+  "CMakeFiles/SIRproject.dir/src/sirmodel.cpp.o.d"
+  "CMakeFiles/SIRproject.dir/src/sirmodelextended.cpp.o"
+  "CMakeFiles/SIRproject.dir/src/sirmodelextended.cpp.o.d"
   "SIRproject"
   "SIRproject.pdb"
 )

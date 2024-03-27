@@ -54,7 +54,7 @@ int main () {
     if(r != "") {gamma = atof(r.c_str());}
 
     r = file -> read_row_fromfile();
-    if(r != "") {alfa = atof(r.c_str());}
+    if(r != "") {alpha = atof(r.c_str());}
 
     // LEGGI S,R,I
     r = file -> read_row_fromfile();
@@ -76,7 +76,7 @@ int main () {
     // SETTO LO STATO INZIALE
     sirdata *initial_state = new Sirdata(susc, inf, rec);
     if(r.compare("sirmodel")){
-        sirmodel *f = new sirmodel(beta, gamma);
+        sirmodel *f = new sirmodel(beta, gamma, alpha);
         f ->setstate(initiel_state);
         result= m -> generate_data(duration);
     }
@@ -95,9 +95,9 @@ int main () {
 
   try{
         sirmodelextended *ex = new sirmodelextended(0.4,0.5,0.9);
-        cout << ex->getbeta() << endl;
-        cout << ex->getgamma() << endl;
-        cout << ex->getdelta() << endl;
+        cout << ex->get_beta() << endl;
+        cout << ex->get_gamma() << endl;
+        cout << ex->get_alpha() << endl;
         ex->generate_data(10);
     }
     catch(const char *message){

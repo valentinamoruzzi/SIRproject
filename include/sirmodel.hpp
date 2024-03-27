@@ -11,11 +11,11 @@ using namespace std;
 namespace sirmodel{
 class sirmodel {
 private:
-    sirdata *state = NULL;
     double beta;
     double gamma;
 
 public:
+    sirdata *state = NULL;
     sirmodel ();
     sirmodel ( double b, double g);
     sirmodel (sirdata *state, double b, double g);

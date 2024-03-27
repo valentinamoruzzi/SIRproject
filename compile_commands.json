@@ -13,8 +13,20 @@
 },
 {
   "directory": "/Users/valentinamoruzzi/Documents/GitHub/SIRproject",
-  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/valentinamoruzzi/Documents/GitHub/SIRproject/include  -Wall -Wextra -std=gnu++17 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -o CMakeFiles/SIRproject.dir/src/sir_model.cpp.o -c /Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sir_model.cpp",
-  "file": "/Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sir_model.cpp",
-  "output": "CMakeFiles/SIRproject.dir/src/sir_model.cpp.o"
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/valentinamoruzzi/Documents/GitHub/SIRproject/include  -Wall -Wextra -std=gnu++17 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -o CMakeFiles/SIRproject.dir/src/sirmodel.cpp.o -c /Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodel.cpp",
+  "file": "/Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodel.cpp",
+  "output": "CMakeFiles/SIRproject.dir/src/sirmodel.cpp.o"
+},
+{
+  "directory": "/Users/valentinamoruzzi/Documents/GitHub/SIRproject",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/valentinamoruzzi/Documents/GitHub/SIRproject/include  -Wall -Wextra -std=gnu++17 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -o CMakeFiles/SIRproject.dir/src/sirmodelextended.cpp.o -c /Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodelextended.cpp",
+  "file": "/Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodelextended.cpp",
+  "output": "CMakeFiles/SIRproject.dir/src/sirmodelextended.cpp.o"
+},
+{
+  "directory": "/Users/valentinamoruzzi/Documents/GitHub/SIRproject",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/valentinamoruzzi/Documents/GitHub/SIRproject/include  -Wall -Wextra -std=gnu++17 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -o CMakeFiles/SIRproject.dir/src/sirmanage.cpp.o -c /Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmanage.cpp",
+  "file": "/Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmanage.cpp",
+  "output": "CMakeFiles/SIRproject.dir/src/sirmanage.cpp.o"
 }
 ]
