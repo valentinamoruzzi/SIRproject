@@ -4,6 +4,7 @@
 #include"sirdata.hpp"
 #include"sirmodel.hpp"
 #include "sirmanage.hpp"
+#include "sirmodelextended.hpp"
 #include <cstdlib>
 #include <exception>
 #include <iostream>
@@ -45,12 +46,15 @@ int main () {
    try {
     sirmanage *file = new sirmanage("sirmodel.cfg");
 
-    //LEGGI BETA e GAMMA
+    //LEGGI BETA e GAMMA e ALFA
     r = file -> read_row_fromfile();
     if(r != "") {beta = atof(r.c_str());}
 
     r = file -> read_row_fromfile();
     if(r != "") {gamma = atof(r.c_str());}
+
+    r = file -> read_row_fromfile();
+    if(r != "") {alfa = atof(r.c_str());}
 
     // LEGGI S,R,I
     r = file -> read_row_fromfile();
@@ -88,6 +92,18 @@ int main () {
    }
    
    */
+
+  try{
+        sirmodelextended *ex = new sirmodelextended(0.4,0.5,0.9);
+        cout << ex->getbeta() << endl;
+        cout << ex->getgamma() << endl;
+        cout << ex->getdelta() << endl;
+        ex->generate_data(10);
+    }
+    catch(const char *message){
+        cout << message<< endl;
+    }
+    return 0;  
     
 } 
 
