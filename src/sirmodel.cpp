@@ -6,22 +6,25 @@
 
 using namespace std;
 
-namespace sirmodel {
+namespace Sirmodel {
 
 sirmodel::sirmodel (){
     set_beta(BETA_DEFAULT);
     set_gamma(GAMMA_DEFAULT);
+    set_R0();
 }
 
 sirmodel::sirmodel ( double b, double g){
     set_beta(b);
     set_gamma(g);
+    set_R0();
 }
 
 sirmodel::sirmodel (sirdata *state, double b, double g){
     set_state(state);
     set_beta(b);
     set_gamma(g);
+    set_R0();
 }
 
 sirdata* sirmodel::get_state() {return state;}
@@ -44,29 +47,36 @@ void sirmodel::set_gamma(const double g)
     else 
         gamma = g;
     }
+
+    double sirmodel:: get_R0(){return R0;}
+    void sirmodel::set_R0(){
+        double r_zero = get_beta()/get_gamma() ;
+        if(r_zero < 1 ){
+            throw "Error....";
+        }
+        else R0 = r_zero;
+    };
+
 vector<sirdata> sirmodel::generate_data(int duration) {
     vector<sirdata> result;
     if (state != NULL)
     {
         result.push_back(*state); // serve l'asterisco perché solo state è gia un puntatore
-        cout << "Tempo =:"<< endl;
-        cout << "S:"<< state->get_susc()<< endl;
-        cout <<"I:"<< state ->get_inf() << endl;
-        cout << "R:" << state ->get_rec() << endl;
+        //cout << "Tempo 0 :"<<endl;
+        //cout << "S:"<< state->get_susc()<< endl;
+        //cout <<"I:"<< state ->get_inf() << endl;
+        //cout << "R:" << state ->get_rec() << endl;
 
         const int pop_now = state ->get_pop(); //now
         for (int i = 0; i < duration; i++ ){
 
             sirdata *state_i = &result.back();
-            int newinf = round((beta/pop_now) * state_i ->get_susc()* state_i ->get_inf());
-            int newrec = (int)(gamma*state_i ->get_inf());
+            const int newinf = (int)((get_beta()*state_i->get_susc()* state_i->get_inf())/pop_now);
+            const int newrec = (int)(get_gamma()*state_i->get_inf());
 
-            state_i -> set_susc(state_i -> get_susc()- newinf);
-            state_i -> set_inf(state_i -> get_inf() + newinf - newrec); //riguarda 
-            state_i -> set_rec(state_i ->get_rec() + newrec);
-
-            cout << "Tempo " << i+1 << endl;
-            state->toString();
+            state -> set_susc(state_i -> get_susc()- newinf);
+            state -> set_inf(state_i -> get_inf() + newinf - newrec); 
+            state -> set_rec(state_i -> get_rec() + newrec);
 
         if(!state->check_pop())
             throw "Errore: valore popolazione non corrisponde alla somma di s,r,i!";

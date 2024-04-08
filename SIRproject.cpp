@@ -14,7 +14,7 @@
 #include <cmath>
 
 using namespace std;
-using namespace sirmodel;
+using namespace Sirmodel;
 
 
 int main () {
@@ -37,9 +37,9 @@ int main () {
     }
     */
 
-   /* int duration;
-   double beta, gamma;
-   int susc, inf, rec;
+   int duration;
+   double beta, gamma, alpha;
+   int susc = 0, inf=0, rec=0;
    string r;
    vector<sirdata> results;
 
@@ -56,7 +56,7 @@ int main () {
     r = file -> read_row_fromfile();
     if(r != "") {alpha = atof(r.c_str());}
 
-    // LEGGI S,R,I
+    // LEGGI S,I,R
     r = file -> read_row_fromfile();
     if(r !="") {susc = stoi(r.c_str(), 0, 10); }
 
@@ -72,39 +72,44 @@ int main () {
 
     // LEGGI MODELO
     r = file -> read_row_fromfile();
+    cout << "r:"<<r<<endl;
 
     // SETTO LO STATO INZIALE
-    sirdata *initial_state = new Sirdata(susc, inf, rec);
+    sirdata *initial_state = new sirdata(susc, inf, rec);
     if(r.compare("sirmodel")){
-        sirmodel *f = new sirmodel(beta, gamma, alpha);
-        f ->setstate(initiel_state);
-        result= m -> generate_data(duration);
+       cout << beta<< endl;
+        cout << gamma<< endl;
+        cout << beta/gamma<< endl; 
+        sirmodel *f = new sirmodel(beta, gamma);
+        f->set_state(initial_state);
+        results = f-> generate_data(duration);
     }
     else {
-        sirmodelextended *ex = new sirmpdelextende(beta, gamma, delta);
+        sirmodelextended *ex = new sirmodelextended(beta, gamma, alpha);
         ex->set_state(initial_state);
         results = ex->generate_data(duration);
     }
     for (auto &data : results) file ->printdata(data);
+    
    }
    catch(const char *message){
     cout << message << endl;
    }
    
-   */
+   
 
-  try{
-        sirmodelextended *ex = new sirmodelextended(0.4,0.5,0.9);
+  /*try{
+        sirmodel *ex = new sirmodel(0.4,0.5);
         cout << ex->get_beta() << endl;
         cout << ex->get_gamma() << endl;
-        cout << ex->get_alpha() << endl;
+        //cout << ex->get_alpha() << endl;
         ex->generate_data(10);
     }
     catch(const char *message){
         cout << message<< endl;
     }
     return 0;  
-    
+  */  
 } 
 
 

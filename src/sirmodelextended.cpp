@@ -3,15 +3,17 @@
 
 using namespace std;
 
-namespace sirmodel{
+namespace Sirmodel{
     sirmodelextended::sirmodelextended(){
 
         set_alpha(ALPHA_DEFAULT);
+        set_R0();
     }
 
     sirmodelextended::sirmodelextended(double a) {
 
         set_alpha(a);
+        set_R0();
 
     }
 
@@ -20,6 +22,7 @@ namespace sirmodel{
         set_beta(b);
         set_gamma(g);
         set_alpha(a);
+        set_R0();
     }
 
     double sirmodelextended::get_alpha() {return alpha;}
@@ -35,7 +38,7 @@ namespace sirmodel{
     if (state != NULL)
     {
         result.push_back(*state); // serve l'asterisco perché solo state è gia un puntatore
-        cout << "Tempo =:"<< endl;
+        cout << "Tempo 0:"<< endl;
         cout << "S:"<< state->get_susc()<< endl;
         cout <<"I:"<< state ->get_inf() << endl;
         cout << "R:" << state ->get_rec() << endl;
@@ -44,16 +47,16 @@ namespace sirmodel{
         for (int i = 0; i < duration; i++ ){
 
             sirdata *state_i = &result.back();
-            int newinf = round((beta/pop_now) * state_i ->get_susc()* state_i ->get_inf());
-            int newrec = (int)(gamma * state_i ->get_inf());
+            int newinf = round((get_beta() /pop_now) * state_i ->get_susc()* state_i ->get_inf());
+            int newrec = (int)(get_gamma() * state_i ->get_inf());
             int newsusc = (int)(alpha * state_i ->get_rec()); 
 
             state_i -> set_susc(state_i -> get_susc()- newinf + newsusc);
             state_i -> set_inf(state_i -> get_inf() + newinf - newrec); //riguarda 
             state_i -> set_rec(state_i ->get_rec() + newrec - newsusc);
 
-            cout << "Tempo " << i+1 << endl;
-            state->toString();
+            //cout << "Tempo " << i+1 << endl;
+            //state->toString();
 
         if(!state->check_pop())
             throw "Errore: valore popolazione non corrisponde alla somma di s,r,i!";

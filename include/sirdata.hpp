@@ -1,5 +1,7 @@
 #ifndef sirdata_HPP
 #define sirdata_HPP
+#include <string>
+using namespace std;
 
 class sirdata {
 
@@ -19,7 +21,7 @@ class sirdata {
     void set_rec( int recovered);
     int get_pop();
     bool check_pop();
-    void toString();
+    string toString();
     bool operator == (sirdata d);
     
 };

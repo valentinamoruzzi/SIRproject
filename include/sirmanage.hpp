@@ -5,11 +5,11 @@
 
 using namespace std;
 
-namespace sirmodel {
+namespace Sirmodel {
 class sirmanage{
     private:
     string in_filepath;
-    string out_fliepath;
+    string out_filepath;
     char output_type;
     ifstream *sr = NULL;
     ofstream *sw = NULL;

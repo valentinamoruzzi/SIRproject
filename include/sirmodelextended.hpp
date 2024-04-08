@@ -4,7 +4,7 @@
 #include <vector>
 #include "sirmodel.hpp"
 
-namespace sirmodel{
+namespace Sirmodel{
     class sirmodelextended: public sirmodel{
     private: 
         double alpha;

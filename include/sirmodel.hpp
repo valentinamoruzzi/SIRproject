@@ -8,12 +8,14 @@
 #define GAMMA_DEFAULT 0.1
 
 using namespace std;
-namespace sirmodel{
+namespace Sirmodel{
 class sirmodel {
 private:
     double beta;
     double gamma;
-
+    double R0;
+protected:
+    void set_R0();
 public:
     sirdata *state = NULL;
     sirmodel ();
@@ -25,6 +27,8 @@ public:
     void set_beta(const double b);
     double get_gamma();
     void set_gamma(const double g);
+    double get_R0();
+    
     vector<sirdata> generate_data(int duration);
 
 };

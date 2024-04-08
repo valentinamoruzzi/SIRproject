@@ -1,5 +1,6 @@
 #include "sirdata.hpp"
 #include <iostream>
+#include <sstream>
 
 using namespace std;
 
@@ -49,11 +50,11 @@ bool sirdata::check_pop(){
     return false;
 }
 
-void sirdata::toString() {
+string sirdata::toString() {
     
-    cout << "S:"<< get_susc()<< endl;
-    cout <<"I:"<< get_inf() << endl;
-    cout << "R:" << get_rec() << endl;
+    stringstream ss;
+    ss << get_susc()<< ";"<< get_inf() << ";" << get_rec() << endl;
+    return ss.str();
 }
 
 bool sirdata::operator == (sirdata d) {
