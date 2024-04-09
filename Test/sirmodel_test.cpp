@@ -17,7 +17,7 @@ bool isequal (vector<sirdata> v1, vector<sirdata> v2) {
         if (i == dim ) return true;
     else return false;
 }
-TEST_CASE("non mi irocordo cosa devo scrivere "){
+TEST_CASE("Testing class sirdata "){
     sirdata test_sm = {3980, 2, 0};
 
     CHECK(test_sm.get_susc() == 3980);
@@ -31,7 +31,7 @@ TEST_CASE("Testing class Sirmodel"){
     CHECK(test_sirmodel.get_gamma() == 0.1);
 }
 
-TEST_CASE("bla bla bla"){
+TEST_CASE("SIR model"){
     sirdata initial_state = {3980, 2, 0};
     sirmodel test_ml ={&initial_state, 0.6, 0.1};
     int duration{10};
