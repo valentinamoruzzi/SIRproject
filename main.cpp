@@ -90,7 +90,7 @@ int main () {
         sirmodelextended *ex = new sirmodelextended(beta, gamma, alpha);
         ex->set_state(initial_state);
         results = ex->generate_data(duration);
-        cout << "ok"<<endl;
+        
     }
     for (auto &data : results) file ->printdata(data);
     
