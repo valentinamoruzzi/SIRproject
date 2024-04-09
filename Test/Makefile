@@ -177,6 +177,30 @@ Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodel.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sirmodel_test.dir/build.make CMakeFiles/sirmodel_test.dir/Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodel.cpp.s
 .PHONY : Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodel.cpp.s
 
+Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodelextended.o: Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodelextended.cpp.o
+.PHONY : Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodelextended.o
+
+# target to build an object file
+Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodelextended.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sirmodel_test.dir/build.make CMakeFiles/sirmodel_test.dir/Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodelextended.cpp.o
+.PHONY : Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodelextended.cpp.o
+
+Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodelextended.i: Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodelextended.cpp.i
+.PHONY : Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodelextended.i
+
+# target to preprocess a source file
+Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodelextended.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sirmodel_test.dir/build.make CMakeFiles/sirmodel_test.dir/Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodelextended.cpp.i
+.PHONY : Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodelextended.cpp.i
+
+Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodelextended.s: Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodelextended.cpp.s
+.PHONY : Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodelextended.s
+
+# target to generate assembly for a file
+Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodelextended.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sirmodel_test.dir/build.make CMakeFiles/sirmodel_test.dir/Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodelextended.cpp.s
+.PHONY : Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodelextended.cpp.s
+
 sirmodel_test.o: sirmodel_test.cpp.o
 .PHONY : sirmodel_test.o
 
@@ -216,6 +240,9 @@ help:
 	@echo "... Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodel.o"
 	@echo "... Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodel.i"
 	@echo "... Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodel.s"
+	@echo "... Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodelextended.o"
+	@echo "... Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodelextended.i"
+	@echo "... Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodelextended.s"
 	@echo "... sirmodel_test.o"
 	@echo "... sirmodel_test.i"
 	@echo "... sirmodel_test.s"

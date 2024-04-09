@@ -1,6 +1,12 @@
 [
 {
   "directory": "/Users/valentinamoruzzi/Documents/GitHub/SIRproject/Test",
+  "command": "g++  -I/Users/valentinamoruzzi/Documents/GitHub/SIRproject/Test/../include -std=gnu++17 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -o CMakeFiles/sirmodel_test.dir/Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodelextended.cpp.o -c /Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodelextended.cpp",
+  "file": "/Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodelextended.cpp",
+  "output": "CMakeFiles/sirmodel_test.dir/Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodelextended.cpp.o"
+},
+{
+  "directory": "/Users/valentinamoruzzi/Documents/GitHub/SIRproject/Test",
   "command": "g++  -I/Users/valentinamoruzzi/Documents/GitHub/SIRproject/Test/../include -std=gnu++17 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -o CMakeFiles/sirmodel_test.dir/Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodel.cpp.o -c /Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodel.cpp",
   "file": "/Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodel.cpp",
   "output": "CMakeFiles/sirmodel_test.dir/Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodel.cpp.o"

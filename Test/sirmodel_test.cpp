@@ -4,6 +4,7 @@
 #include "doctest.h"
 #include "sirdata.hpp"
 #include "sirmodel.hpp"
+#include "sirmodelextended.hpp"
 #include <vector>
 
 using namespace std;
@@ -41,5 +42,33 @@ TEST_CASE("SIR model"){
       {3930, 46, 6},{3903, 69, 10},  {3863, 103, 16}, {3804, 152, 26}};
     
     auto result = test_ml.generate_data(duration);
+    CHECK(isequal(result, expected_data)==true);
+}
+
+TEST_CASE("SIR model extended"){
+    sirdata initial_state = {3980, 2, 0};
+    sirmodelextended *test_ex = new sirmodelextended(0.6,0.1,0.5);
+    test_ex ->set_state(&initial_state);
+    int duration{10};
+    vector<sirdata> expected_data = {
+      {3980, 2, 0}, {3979, 3, 0}, {3978, 4, 0}, {3976, 6, 0},
+      {3973, 9, 0}, {3968, 14, 0},  {3960, 21, 1}, {3948, 31, 3}, 
+      {3931, 46, 5},{3906, 69, 7},  {3869, 103, 10}, {3814, 153, 15}};
+    
+    auto result = test_ex ->generate_data(duration);
+    CHECK(isequal(result, expected_data)==true);
+}
+
+TEST_CASE("SIR model extended alpha tend to 0"){
+    sirdata initial_state = {3980, 2, 0};
+    sirmodelextended *test_ex = new sirmodelextended(0.6,0.1,0);
+    test_ex ->set_state(&initial_state);
+    int duration{10};
+    vector<sirdata> expected_data = {
+      {3980, 2, 0}, {3979, 3, 0}, {3978, 4, 0}, {3976, 6, 0},
+      {3973, 9, 0}, {3968, 14, 0},  {3960, 21, 1}, {3948, 31, 3}, 
+      {3930, 46, 6},{3903, 69, 10},  {3863, 103, 16}, {3804, 152, 26}};
+    
+    auto result = test_ex -> generate_data(duration);
     CHECK(isequal(result, expected_data)==true);
 }

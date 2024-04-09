@@ -47,16 +47,14 @@ namespace Sirmodel{
         for (int i = 0; i < duration; i++ ){
 
             sirdata *state_i = &result.back();
-            int newinf = round((get_beta() /pop_now) * state_i ->get_susc()* state_i ->get_inf());
-            int newrec = (int)(get_gamma() * state_i ->get_inf());
-            int newsusc = (int)(alpha * state_i ->get_rec()); 
+            const int newinf = (int)((get_beta()*state_i->get_susc()* state_i->get_inf())/pop_now);
+            const int newrec = (int)(get_gamma()*state_i->get_inf());
+            const int newsusc = (int)(get_alpha()*state_i ->get_rec());
 
-            state_i -> set_susc(state_i -> get_susc()- newinf + newsusc);
-            state_i -> set_inf(state_i -> get_inf() + newinf - newrec); //riguarda 
-            state_i -> set_rec(state_i ->get_rec() + newrec - newsusc);
+            state -> set_susc(state_i -> get_susc()- newinf + newsusc);
+            state -> set_inf(state_i -> get_inf() + newinf - newrec); 
+            state -> set_rec(state_i -> get_rec() + newrec - newsusc);
 
-            //cout << "Tempo " << i+1 << endl;
-            //state->toString();
 
         if(!state->check_pop())
             throw "Errore: valore popolazione non corrisponde alla somma di s,r,i!";

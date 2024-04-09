@@ -1,8 +1,8 @@
 #include <iostream>
-#include<string>
-#include<cmath>
-#include"sirdata.hpp"
-#include"sirmodel.hpp"
+#include <string>
+#include <cmath>
+#include "sirdata.hpp"
+#include "sirmodel.hpp"
 #include "sirmanage.hpp"
 #include "sirmodelextended.hpp"
 #include <cstdlib>
@@ -11,6 +11,7 @@
 #include <vector>
 #include <cstdio>
 #include <string>
+#include <cmath>
 #include <cmath>
 
 using namespace std;
@@ -83,11 +84,13 @@ int main () {
         sirmodel *f = new sirmodel(beta, gamma);
         f->set_state(initial_state);
         results = f-> generate_data(duration);
+        
     }
     else {
         sirmodelextended *ex = new sirmodelextended(beta, gamma, alpha);
         ex->set_state(initial_state);
         results = ex->generate_data(duration);
+        cout << "ok"<<endl;
     }
     for (auto &data : results) file ->printdata(data);
     
