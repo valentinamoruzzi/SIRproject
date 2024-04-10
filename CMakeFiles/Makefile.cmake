@@ -36,6 +36,11 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/Cellar/cmake/3.29.1/share/cmake/Modules/Platform/Darwin-Initialize.cmake"
   "/usr/local/Cellar/cmake/3.29.1/share/cmake/Modules/Platform/Darwin.cmake"
   "/usr/local/Cellar/cmake/3.29.1/share/cmake/Modules/Platform/UnixPaths.cmake"
+  "/usr/local/lib/cmake/SFML/SFMLConfig.cmake"
+  "/usr/local/lib/cmake/SFML/SFMLConfigDependencies.cmake"
+  "/usr/local/lib/cmake/SFML/SFMLConfigVersion.cmake"
+  "/usr/local/lib/cmake/SFML/SFMLSharedTargets-release.cmake"
+  "/usr/local/lib/cmake/SFML/SFMLSharedTargets.cmake"
   )
 
 # The corresponding makefile is:

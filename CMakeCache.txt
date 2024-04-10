@@ -259,6 +259,12 @@ MEMORYCHECK_COMMAND:FILEPATH=MEMORYCHECK_COMMAND-NOTFOUND
 //File that contains suppressions for the memory checker
 MEMORYCHECK_SUPPRESSIONS_FILE:FILEPATH=
 
+//The directory containing a CMake configuration file for SFML.
+SFML_DIR:PATH=/usr/local/lib/cmake/SFML
+
+//Path to a file.
+SFML_DOC_DIR:PATH=/usr/local/share/doc/SFML
+
 //Value Computed by CMake
 SIRproject_BINARY_DIR:STATIC=/Users/valentinamoruzzi/Documents/Github/SIRproject
 

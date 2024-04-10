@@ -80,22 +80,20 @@ int main () {
 
     // SETTO LO STATO INZIALE
     sirdata *initial_state = new sirdata(susc, inf, rec);
-    if(r.compare("sirmodel")){
-       cout << beta<< endl;
-        cout << gamma<< endl;
-        cout << beta/gamma<< endl; 
-        sirmodel *f = new sirmodel(beta, gamma);
-        f->set_state(initial_state);
-        results = f-> generate_data(duration);
+    if(r == "sirmodel"){
+
+        sirmodel *m = new sirmodel(beta, gamma);
+        m->set_state(initial_state);
+        results = m-> generate_data(duration);
         
     }
-    else {
+    else if (r == "sirmodelextended") {
         sirmodelextended *ex = new sirmodelextended(beta, gamma, alpha);
         ex->set_state(initial_state);
         results = ex->generate_data(duration);
         
     }
-    for (auto &data : results) file ->printdata(data);
+    file -> printdata(results, duration, r);
     
    }
    catch(const char *message){

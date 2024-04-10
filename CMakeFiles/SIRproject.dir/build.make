@@ -252,6 +252,9 @@ SIRproject: CMakeFiles/SIRproject.dir/src/sfml/curve.cpp.o
 SIRproject: CMakeFiles/SIRproject.dir/src/sfml/grid.cpp.o
 SIRproject: CMakeFiles/SIRproject.dir/src/sfml/line.cpp.o
 SIRproject: CMakeFiles/SIRproject.dir/build.make
+SIRproject: /usr/local/lib/libsfml-graphics.2.6.1.dylib
+SIRproject: /usr/local/lib/libsfml-window.2.6.1.dylib
+SIRproject: /usr/local/lib/libsfml-system.2.6.1.dylib
 SIRproject: CMakeFiles/SIRproject.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/valentinamoruzzi/Documents/Github/SIRproject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable SIRproject"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SIRproject.dir/link.txt --verbose=$(VERBOSE)
