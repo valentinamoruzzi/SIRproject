@@ -19,17 +19,17 @@ protected:
 public:
     sirdata *state = NULL;
     sirmodel ();
-    sirmodel ( double b, double g);
-    sirmodel (sirdata *state, double b, double g);
+    sirmodel ( const double &b, const double &g);
+    sirmodel (sirdata *state, const double &b, const double &g);
     sirdata* get_state();
     void set_state(sirdata *s);
     double get_beta();
-    void set_beta(const double b);
+    void set_beta(const double &b);
     double get_gamma();
-    void set_gamma(const double g);
+    void set_gamma(const double &g);
     double get_R0();
     
-    vector<sirdata> generate_data(int duration);
+    vector<sirdata> generate_data(const int &duration);
 
 };
 }

@@ -2,7 +2,9 @@
 #include "sirmodel.hpp"
 #include <iostream>
 #include <vector>
-#include <iostream>
+#include <cmath>
+#include <string>
+#include <cassert>
 
 using namespace std;
 
@@ -14,13 +16,13 @@ sirmodel::sirmodel (){
     set_R0();
 }
 
-sirmodel::sirmodel ( double b, double g){
+sirmodel::sirmodel (const double &b,const double &g){
     set_beta(b);
     set_gamma(g);
     set_R0();
 }
 
-sirmodel::sirmodel (sirdata *state, double b, double g){
+sirmodel::sirmodel (sirdata *state, const double &b,const double &g){
     set_state(state);
     set_beta(b);
     set_gamma(g);
@@ -34,14 +36,14 @@ void sirmodel::set_state(sirdata *s)
     else state = s;
     }
 double sirmodel::get_beta() {return beta;}
-void sirmodel::set_beta(const double b) 
+void sirmodel::set_beta(const double &b) 
 {if (b < 0 && b>1)
         throw "Error: the value of beta is not correct";
     else 
         beta = b;
     }
 double sirmodel::get_gamma() {return gamma;}
-void sirmodel::set_gamma(const double g)
+void sirmodel::set_gamma(const double &g)
     {if (g < 0 && g>1)
         throw "Error: the value of gamma is not correct";
     else 
@@ -57,7 +59,7 @@ void sirmodel::set_gamma(const double g)
         else R0 = r_zero;
     };
 
-vector<sirdata> sirmodel::generate_data(int duration) {
+vector<sirdata> sirmodel::generate_data(const int &duration) {
     vector<sirdata> result;
     if (state != NULL)
     {

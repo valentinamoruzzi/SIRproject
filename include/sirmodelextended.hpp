@@ -10,11 +10,11 @@ namespace Sirmodel{
         double alpha;
     public:
         sirmodelextended();
-        sirmodelextended( double a);
-        sirmodelextended( double b, double g, double a);
+        sirmodelextended(const double &a);
+        sirmodelextended(const double &b, const double &g, const double &a);
         double get_alpha();
-        void set_alpha(double a);
-        vector<sirdata> generate_data(int duration);
+        void set_alpha(const double &a);
+        vector<sirdata> generate_data(const int &duration);
 
     };
 }

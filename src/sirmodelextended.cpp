@@ -10,14 +10,14 @@ namespace Sirmodel{
         set_R0();
     }
 
-    sirmodelextended::sirmodelextended(double a) {
+    sirmodelextended::sirmodelextended(const double &a) {
 
         set_alpha(a);
         set_R0();
 
     }
 
-    sirmodelextended::sirmodelextended( double b, double g, double a){
+    sirmodelextended::sirmodelextended( const double &b, const double &g, const double &a){
 
         set_beta(b);
         set_gamma(g);
@@ -26,14 +26,14 @@ namespace Sirmodel{
     }
 
     double sirmodelextended::get_alpha() {return alpha;}
-    void sirmodelextended::set_alpha(double a)
+    void sirmodelextended::set_alpha(const double &a)
     {if (a < 0 && a>1)
         throw "Error: the value of alpha is not correct";
     else 
         alpha = a;
     }
 
-    vector<sirdata> sirmodelextended::generate_data(int duration){
+    vector<sirdata> sirmodelextended::generate_data(const int &duration){
          vector<sirdata> result;
     if (state != NULL)
     {
@@ -57,7 +57,7 @@ namespace Sirmodel{
 
 
         if(!state->check_pop())
-            throw "Errore: valore popolazione non corrisponde alla somma di s,r,i!";
+            throw "Error: population do not correspond to the sum of S,R,I!";
         result.push_back(*state);
 
         }
