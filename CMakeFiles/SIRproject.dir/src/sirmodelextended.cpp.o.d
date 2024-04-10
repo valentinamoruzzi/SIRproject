@@ -1,6 +1,6 @@
 CMakeFiles/SIRproject.dir/src/sirmodelextended.cpp.o: \
-  /Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodelextended.cpp \
-  /Users/valentinamoruzzi/Documents/GitHub/SIRproject/include/sirmodelextended.hpp \
+  /Users/valentinamoruzzi/Documents/Github/SIRproject/src/sirmodelextended.cpp \
+  /Users/valentinamoruzzi/Documents/Github/SIRproject/include/sirmodelextended.hpp \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/vector \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/pthread.h \
@@ -140,8 +140,8 @@ CMakeFiles/SIRproject.dir/src/sirmodelextended.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/i386/_limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/syslimits.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__split_buffer \
-  /Users/valentinamoruzzi/Documents/GitHub/SIRproject/include/sirmodel.hpp \
-  /Users/valentinamoruzzi/Documents/GitHub/SIRproject/include/sirdata.hpp \
+  /Users/valentinamoruzzi/Documents/Github/SIRproject/include/sirmodel.hpp \
+  /Users/valentinamoruzzi/Documents/Github/SIRproject/include/sirdata.hpp \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/string \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/string_view \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__string \

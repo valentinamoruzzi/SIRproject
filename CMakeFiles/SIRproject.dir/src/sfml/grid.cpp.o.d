@@ -1,22 +1,12 @@
-CMakeFiles/SIRproject.dir/src/sirmanage.cpp.o: \
-  /Users/valentinamoruzzi/Documents/Github/SIRproject/src/sirmanage.cpp \
-  /Users/valentinamoruzzi/Documents/Github/SIRproject/include/sirdata.hpp \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/string \
+CMakeFiles/SIRproject.dir/src/sfml/grid.cpp.o: \
+  /Users/valentinamoruzzi/Documents/Github/SIRproject/src/sfml/grid.cpp \
+  /Users/valentinamoruzzi/Documents/Github/SIRproject/include/sfml/grid.h \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/vector \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/pthread.h \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/string_view \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__string \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/algorithm \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/initializer_list \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cstddef \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__cxx_version \
-  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/stddef.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/__stddef_max_align_t.h \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__nullptr \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/type_traits \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cstring \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/string.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/string.h \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/iosfwd \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/wchar.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/wchar.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/_types.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/_types.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/cdefs.h \
@@ -27,9 +17,9 @@ CMakeFiles/SIRproject.dir/src/sirmanage.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/_pthread/_pthread_types.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/AvailabilityInternal.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/_types/_size_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/_types/_null.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/_types/_rsize_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/_types/_size_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/_types/_mbstate_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/machine/types.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/i386/types.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/_types/_int8_t.h \
@@ -42,8 +32,48 @@ CMakeFiles/SIRproject.dir/src/sirmanage.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/_types/_u_int64_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/_types/_intptr_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/_types/_uintptr_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/_types/_errno_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/_types/_ct_rune_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/_types/_rune_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/_types/_wchar_t.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/stdarg.h \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/stdio.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/stdio.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/_stdio.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/_types/_va_list.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/stdio.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/_ctermid.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/_types/_off_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/_types/_ssize_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/time.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/_types/_clock_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/_types/_time_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/_types/_timespec.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/_wctype.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/__wctype.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/_types/_wint_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/_types/_wctype_t.h \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/ctype.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/ctype.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/_ctype.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/runetype.h \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__bit_reference \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/bit \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/limits \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/type_traits \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cstddef \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__cxx_version \
+  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/stddef.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/__stddef_max_align_t.h \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__nullptr \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__undef_macros \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__debug \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/algorithm \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/initializer_list \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cstring \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/string.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/string.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/_types/_rsize_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/_types/_errno_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/strings.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/utility \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__tuple \
@@ -57,34 +87,6 @@ CMakeFiles/SIRproject.dir/src/sirmanage.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/_types/_uint64_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/_types/_intmax_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/_types/_uintmax_t.h \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__debug \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/iosfwd \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/wchar.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/wchar.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/_types/_mbstate_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/_types/_ct_rune_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/_types/_rune_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/_types/_wchar_t.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/stdarg.h \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/stdio.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/stdio.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/_stdio.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/_types/_va_list.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/stdio.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/_ctermid.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/_types/_off_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/time.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/_types/_clock_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/_types/_time_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/_types/_timespec.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/_wctype.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/__wctype.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/_types/_wint_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/_types/_wctype_t.h \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/ctype.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/ctype.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/_ctype.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/runetype.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/memory \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/typeinfo \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/exception \
@@ -120,8 +122,6 @@ CMakeFiles/SIRproject.dir/src/sirmanage.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/_types/_mode_t.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/math.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/math.h \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/limits \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__undef_macros \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/new \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/iterator \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__functional_base \
@@ -131,17 +131,6 @@ CMakeFiles/SIRproject.dir/src/sirmanage.cpp.o: \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cassert \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/assert.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/functional \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/bit \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cstdio \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cwchar \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cwctype \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cctype \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/wctype.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/wctype.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/_types/_wctrans_t.h \
-  /Users/valentinamoruzzi/Documents/Github/SIRproject/include/sirmodel.hpp \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/vector \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__bit_reference \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/climits \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/limits.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/limits.h \
@@ -151,7 +140,7 @@ CMakeFiles/SIRproject.dir/src/sirmanage.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/i386/_limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/syslimits.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__split_buffer \
-  /Users/valentinamoruzzi/Documents/Github/SIRproject/include/sirmanage.hpp \
+  /usr/local/include/SFML/Graphics.hpp \
   /usr/local/include/SFML/Window.hpp /usr/local/include/SFML/System.hpp \
   /usr/local/include/SFML/Config.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/TargetConditionals.h \
@@ -162,6 +151,16 @@ CMakeFiles/SIRproject.dir/src/sirmanage.cpp.o: \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/ostream \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/ios \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__locale \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/string \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/string_view \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__string \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cstdio \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cwchar \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cwctype \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cctype \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/wctype.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/wctype.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/_types/_wctrans_t.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/mutex \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__mutex_base \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/chrono \
@@ -272,7 +271,6 @@ CMakeFiles/SIRproject.dir/src/sirmanage.cpp.o: \
   /usr/local/include/SFML/Window/Vulkan.hpp \
   /usr/local/include/SFML/Window/WindowHandle.hpp \
   /usr/local/include/SFML/Window/WindowStyle.hpp \
-  /usr/local/include/SFML/Graphics.hpp \
   /usr/local/include/SFML/Graphics/BlendMode.hpp \
   /usr/local/include/SFML/Graphics/Export.hpp \
   /usr/local/include/SFML/Graphics/CircleShape.hpp \
@@ -306,18 +304,4 @@ CMakeFiles/SIRproject.dir/src/sirmanage.cpp.o: \
   /usr/local/include/SFML/Graphics/Glsl.inl \
   /usr/local/include/SFML/Graphics/Sprite.hpp \
   /usr/local/include/SFML/Graphics/Text.hpp \
-  /usr/local/include/SFML/Graphics/VertexBuffer.hpp \
-  /Users/valentinamoruzzi/Documents/Github/SIRproject/include/sfml/plot.h \
-  /Users/valentinamoruzzi/Documents/Github/SIRproject/include/sfml/axis.h \
-  /Users/valentinamoruzzi/Documents/Github/SIRproject/include/sfml/grid.h \
-  /Users/valentinamoruzzi/Documents/Github/SIRproject/include/sfml/curve.h \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/list \
-  /Users/valentinamoruzzi/Documents/Github/SIRproject/include/sfml/line.h \
-  /Users/valentinamoruzzi/Documents/Github/SIRproject/include/sfml/area.h \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/fstream \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/istream \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/filesystem \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/stack \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/deque \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/iomanip \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/iostream
+  /usr/local/include/SFML/Graphics/VertexBuffer.hpp

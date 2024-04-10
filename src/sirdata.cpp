@@ -36,7 +36,7 @@ void sirdata::set_rec( const int &recovered) {
         rec = recovered;}
 
 int sirdata::get_pop() {return pop;}
-void sirdata::set_pop(const int &population) {
+void sirdata::set_pop(const int population) {
        if (population < 0) 
         throw "Error: population less than 0\n";
     else 

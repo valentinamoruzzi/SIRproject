@@ -12,7 +12,7 @@ class sirdata {
     int rec;   //recovered 
     void set_pop(const int population); // può cambiarlo solo la classe 
     public:
-    sirdata( const int susceptibles, const int infected, const int recovered);
+    sirdata( const int &susceptibles, const int &infected, const int &recovered);
     int get_susc();
     void set_susc( const int &susceptibles);
     int get_inf();

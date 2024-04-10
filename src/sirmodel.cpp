@@ -1,6 +1,7 @@
 #include "sirdata.hpp"
 #include "sirmodel.hpp"
 #include <iostream>
+#include <limits>
 #include <vector>
 #include <cmath>
 #include <string>

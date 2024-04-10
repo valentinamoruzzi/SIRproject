@@ -3,6 +3,7 @@
 
 #include "sirdata.hpp"
 #include <vector>
+#include <cstddef>
 
 #define BETA_DEFAULT 0.6
 #define GAMMA_DEFAULT 0.1

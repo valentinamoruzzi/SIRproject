@@ -94,16 +94,16 @@ namespace Sirmodel {
 
         //adding points
         for(int x =0; x<duration; x++){
-            s_curve.addValue(result[x].get_susc());
-            i_curve.addValue(result[x].get_inf());
-            r_curve.addValue(result[x].get_rec());
+            s_curve.addValue(results[x].get_susc());
+            i_curve.addValue(results[x].get_inf());
+            r_curve.addValue(results[x].get_rec());
         }
 
     plot_tmp.prepare();
         while(window.isOpen()){
             sf::Event event;
             while(window.pollEvent(event)){
-                if(event.type == sf::Event::closed)
+                if(event.type == sf::Event::Closed)
                 window.close();
             }
             window.clear();
@@ -120,19 +120,19 @@ namespace Sirmodel {
             for(auto &data : results){
                 cout << data.toString() << endl;
             }
-        
+        }
         else if(get_output_type() == 'F'){
             for(auto &data : results){
                 *sw << data.toString() << endl;
             }
-        
-        else if(get_output_type() == 'P'){
+        }
+        else if(get_output_type() == 'P') {
             plot(results, duration, model);
-            }
+        }
         else throw "Errore: output errato";
         }
     }
 
 
 
-}}
+
