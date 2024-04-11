@@ -4,7 +4,7 @@
 # compile CXX with /Library/Developer/CommandLineTools/usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/valentinamoruzzi/Documents/Github/SIRproject/include -I/Users/valentinamoruzzi/Documents/Github/SIRproject/include/sfml -isystem /usr/local/include
+CXX_INCLUDES = -I/Users/valentinamoruzzi/Documents/GitHub/SIRproject/include -I/Users/valentinamoruzzi/Documents/GitHub/SIRproject/include/sfml -F/Library/Frameworks
 
-CXX_FLAGS =  -Wall -Wextra -std=gnu++17 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk
+CXX_FLAGS =  -Wall -Wextra -std=gnu++17 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -iframework /Library/Frameworks/. 
 

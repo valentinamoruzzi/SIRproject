@@ -1,6 +1,6 @@
 CMakeFiles/SIRproject.dir/src/sirmanage.cpp.o: \
-  /Users/valentinamoruzzi/Documents/Github/SIRproject/src/sirmanage.cpp \
-  /Users/valentinamoruzzi/Documents/Github/SIRproject/include/sirdata.hpp \
+  /Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmanage.cpp \
+  /Users/valentinamoruzzi/Documents/GitHub/SIRproject/include/sirmanage.hpp \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/string \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/pthread.h \
@@ -139,26 +139,7 @@ CMakeFiles/SIRproject.dir/src/sirmanage.cpp.o: \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/_types/_wctrans_t.h \
-  /Users/valentinamoruzzi/Documents/Github/SIRproject/include/sirmodel.hpp \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/vector \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__bit_reference \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/climits \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/limits.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/limits.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/limits.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/machine/limits.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/i386/limits.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/i386/_limits.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/syslimits.h \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__split_buffer \
-  /Users/valentinamoruzzi/Documents/Github/SIRproject/include/sirmanage.hpp \
-  /usr/local/include/SFML/Window.hpp /usr/local/include/SFML/System.hpp \
-  /usr/local/include/SFML/Config.hpp \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/TargetConditionals.h \
-  /usr/local/include/SFML/System/Clock.hpp \
-  /usr/local/include/SFML/System/Export.hpp \
-  /usr/local/include/SFML/System/Time.hpp \
-  /usr/local/include/SFML/System/Err.hpp \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/fstream \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/ostream \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/ios \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__locale \
@@ -167,6 +148,14 @@ CMakeFiles/SIRproject.dir/src/sirmanage.cpp.o: \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/chrono \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/ctime \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/ratio \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/climits \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/limits.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/limits.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/limits.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/machine/limits.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/i386/limits.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/i386/_limits.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/syslimits.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/system_error \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__errc \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cerrno \
@@ -234,90 +223,11 @@ CMakeFiles/SIRproject.dir/src/sirmanage.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/_types/_nl_item.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__bsd_locale_defaults.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/bitset \
-  /usr/local/include/SFML/System/FileInputStream.hpp \
-  /usr/local/include/SFML/System/InputStream.hpp \
-  /usr/local/include/SFML/System/NonCopyable.hpp \
-  /usr/local/include/SFML/System/Lock.hpp \
-  /usr/local/include/SFML/System/MemoryInputStream.hpp \
-  /usr/local/include/SFML/System/Mutex.hpp \
-  /usr/local/include/SFML/System/Sleep.hpp \
-  /usr/local/include/SFML/System/String.hpp \
-  /usr/local/include/SFML/System/Utf.hpp \
-  /usr/local/include/SFML/System/Utf.inl \
-  /usr/local/include/SFML/System/String.inl \
-  /usr/local/include/SFML/System/Thread.hpp \
-  /usr/local/include/SFML/System/Thread.inl \
-  /usr/local/include/SFML/System/ThreadLocal.hpp \
-  /usr/local/include/SFML/System/ThreadLocalPtr.hpp \
-  /usr/local/include/SFML/System/ThreadLocalPtr.inl \
-  /usr/local/include/SFML/System/Vector2.hpp \
-  /usr/local/include/SFML/System/Vector2.inl \
-  /usr/local/include/SFML/System/Vector3.hpp \
-  /usr/local/include/SFML/System/Vector3.inl \
-  /usr/local/include/SFML/Window/Clipboard.hpp \
-  /usr/local/include/SFML/Window/Export.hpp \
-  /usr/local/include/SFML/Window/Context.hpp \
-  /usr/local/include/SFML/Window/GlResource.hpp \
-  /usr/local/include/SFML/Window/ContextSettings.hpp \
-  /usr/local/include/SFML/Window/Cursor.hpp \
-  /usr/local/include/SFML/Window/Event.hpp \
-  /usr/local/include/SFML/Window/Joystick.hpp \
-  /usr/local/include/SFML/Window/Keyboard.hpp \
-  /usr/local/include/SFML/Window/Mouse.hpp \
-  /usr/local/include/SFML/Window/Sensor.hpp \
-  /usr/local/include/SFML/Window/Touch.hpp \
-  /usr/local/include/SFML/Window/VideoMode.hpp \
-  /usr/local/include/SFML/Window/Window.hpp \
-  /usr/local/include/SFML/Window/WindowBase.hpp \
-  /usr/local/include/SFML/Window/Vulkan.hpp \
-  /usr/local/include/SFML/Window/WindowHandle.hpp \
-  /usr/local/include/SFML/Window/WindowStyle.hpp \
-  /usr/local/include/SFML/Graphics.hpp \
-  /usr/local/include/SFML/Graphics/BlendMode.hpp \
-  /usr/local/include/SFML/Graphics/Export.hpp \
-  /usr/local/include/SFML/Graphics/CircleShape.hpp \
-  /usr/local/include/SFML/Graphics/Shape.hpp \
-  /usr/local/include/SFML/Graphics/Drawable.hpp \
-  /usr/local/include/SFML/Graphics/RenderStates.hpp \
-  /usr/local/include/SFML/Graphics/Transform.hpp \
-  /usr/local/include/SFML/Graphics/Rect.hpp \
-  /usr/local/include/SFML/Graphics/Rect.inl \
-  /usr/local/include/SFML/Graphics/Transformable.hpp \
-  /usr/local/include/SFML/Graphics/VertexArray.hpp \
-  /usr/local/include/SFML/Graphics/Vertex.hpp \
-  /usr/local/include/SFML/Graphics/Color.hpp \
-  /usr/local/include/SFML/Graphics/PrimitiveType.hpp \
-  /usr/local/include/SFML/Graphics/ConvexShape.hpp \
-  /usr/local/include/SFML/Graphics/Font.hpp \
-  /usr/local/include/SFML/Graphics/Glyph.hpp \
-  /usr/local/include/SFML/Graphics/Texture.hpp \
-  /usr/local/include/SFML/Graphics/Image.hpp \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/map \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__tree \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__node_handle \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/optional \
-  /usr/local/include/SFML/Graphics/RectangleShape.hpp \
-  /usr/local/include/SFML/Graphics/RenderTarget.hpp \
-  /usr/local/include/SFML/Graphics/View.hpp \
-  /usr/local/include/SFML/Graphics/RenderTexture.hpp \
-  /usr/local/include/SFML/Graphics/RenderWindow.hpp \
-  /usr/local/include/SFML/Graphics/Shader.hpp \
-  /usr/local/include/SFML/Graphics/Glsl.hpp \
-  /usr/local/include/SFML/Graphics/Glsl.inl \
-  /usr/local/include/SFML/Graphics/Sprite.hpp \
-  /usr/local/include/SFML/Graphics/Text.hpp \
-  /usr/local/include/SFML/Graphics/VertexBuffer.hpp \
-  /Users/valentinamoruzzi/Documents/Github/SIRproject/include/sfml/plot.h \
-  /Users/valentinamoruzzi/Documents/Github/SIRproject/include/sfml/axis.h \
-  /Users/valentinamoruzzi/Documents/Github/SIRproject/include/sfml/grid.h \
-  /Users/valentinamoruzzi/Documents/Github/SIRproject/include/sfml/curve.h \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/list \
-  /Users/valentinamoruzzi/Documents/Github/SIRproject/include/sfml/line.h \
-  /Users/valentinamoruzzi/Documents/Github/SIRproject/include/sfml/area.h \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/fstream \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__bit_reference \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/istream \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/filesystem \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/stack \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/deque \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__split_buffer \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/iomanip \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/iostream

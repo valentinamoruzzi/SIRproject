@@ -5,16 +5,14 @@
 #include "sirmodel.hpp"
 #include "sirmanage.hpp"
 #include "sirmodelextended.hpp"
+#include "sirprint.hpp"
 #include <cstdlib>
 #include <exception>
-#include <iostream>
 #include <vector>
 #include <cstdio>
-#include <string>
-#include <cmath>
-#include <SFML/Graphics.hpp>
-#include <SFML/Window.hpp>
-#include <SFML/System.hpp>
+
+
+
 
 
 using namespace std;
@@ -44,7 +42,7 @@ int main () {
    int duration;
    double beta, gamma, alpha;
    int susc = 0, inf=0, rec=0;
-   string r;
+   string r, model;
    vector<sirdata> results;
 
    try {
@@ -75,25 +73,32 @@ int main () {
     if(r !="") {duration = stoi(r.c_str(), 0, 10); }
 
     // LEGGI MODELO
-    r = file -> read_row_fromfile();
-    cout << "r:"<<r<<endl;
+    model = file -> read_row_fromfile();
+    file ->set_modeltype(model);
 
     // SETTO LO STATO INZIALE
     sirdata *initial_state = new sirdata(susc, inf, rec);
-    if(r == "sirmodel"){
 
+    if(model == "sirmodel"){
+        cout <<file -> get_modeltype() <<endl;
+        cout <<"ok1"<<endl;
         sirmodel *m = new sirmodel(beta, gamma);
         m->set_state(initial_state);
         results = m-> generate_data(duration);
+        sirprint *sir_print = new sirprint(file, m);
+        sir_print -> printdata(results, duration);
         
     }
-    else if (r == "sirmodelextended") {
+    else if (model == "sirmodelextended") {
+        cout <<file -> get_modeltype() <<endl;
         sirmodelextended *ex = new sirmodelextended(beta, gamma, alpha);
         ex->set_state(initial_state);
         results = ex->generate_data(duration);
+        sirprint *sir_print = new sirprint(file,ex);
+        sir_print -> printdata(results, duration);
         
     }
-    file -> printdata(results, duration, r);
+    
     
    }
    catch(const char *message){

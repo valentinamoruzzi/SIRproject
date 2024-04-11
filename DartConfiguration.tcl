@@ -4,8 +4,8 @@
 
 
 # Configuration directories and files
-SourceDirectory: /Users/valentinamoruzzi/Documents/Github/SIRproject
-BuildDirectory: /Users/valentinamoruzzi/Documents/Github/SIRproject
+SourceDirectory: /Users/valentinamoruzzi/Documents/GitHub/SIRproject
+BuildDirectory: /Users/valentinamoruzzi/Documents/GitHub/SIRproject
 
 # Where to place the cost data store
 CostDataFile: 
@@ -27,7 +27,7 @@ SubmitInactivityTimeout:
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/usr/local/Cellar/cmake/3.29.1/bin/cmake" "/Users/valentinamoruzzi/Documents/Github/SIRproject"
+ConfigureCommand: "/usr/local/Cellar/cmake/3.29.1/bin/cmake" "/Users/valentinamoruzzi/Documents/GitHub/SIRproject"
 MakeCommand: /usr/local/Cellar/cmake/3.27.9/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
 DefaultCTestConfigurationType: Release
 

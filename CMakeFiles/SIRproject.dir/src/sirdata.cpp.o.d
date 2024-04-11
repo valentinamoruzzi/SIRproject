@@ -1,6 +1,6 @@
 CMakeFiles/SIRproject.dir/src/sirdata.cpp.o: \
-  /Users/valentinamoruzzi/Documents/Github/SIRproject/src/sirdata.cpp \
-  /Users/valentinamoruzzi/Documents/Github/SIRproject/include/sirdata.hpp \
+  /Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirdata.cpp \
+  /Users/valentinamoruzzi/Documents/GitHub/SIRproject/include/sirdata.hpp \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/string \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/pthread.h \

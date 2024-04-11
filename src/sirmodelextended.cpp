@@ -38,10 +38,7 @@ namespace Sirmodel{
     if (state != NULL)
     {
         result.push_back(*state); // serve l'asterisco perché solo state è gia un puntatore
-        cout << "Tempo 0:"<< endl;
-        cout << "S:"<< state->get_susc()<< endl;
-        cout <<"I:"<< state ->get_inf() << endl;
-        cout << "R:" << state ->get_rec() << endl;
+    
 
         const int pop_now = state ->get_pop(); //now
         for (int i = 0; i < duration; i++ ){

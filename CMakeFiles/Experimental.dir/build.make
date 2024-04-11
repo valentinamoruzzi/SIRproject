@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /Users/valentinamoruzzi/Documents/GitHub/SIRproject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/valentinamoruzzi/Documents/Github/SIRproject
+CMAKE_BINARY_DIR = /Users/valentinamoruzzi/Documents/GitHub/SIRproject
 
 # Utility rule file for Experimental.
 
@@ -82,6 +82,6 @@ CMakeFiles/Experimental.dir/clean:
 .PHONY : CMakeFiles/Experimental.dir/clean
 
 CMakeFiles/Experimental.dir/depend:
-	cd /Users/valentinamoruzzi/Documents/Github/SIRproject && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/valentinamoruzzi/Documents/GitHub/SIRproject /Users/valentinamoruzzi/Documents/Github/SIRproject /Users/valentinamoruzzi/Documents/Github/SIRproject /Users/valentinamoruzzi/Documents/Github/SIRproject /Users/valentinamoruzzi/Documents/Github/SIRproject/CMakeFiles/Experimental.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/valentinamoruzzi/Documents/GitHub/SIRproject && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/valentinamoruzzi/Documents/GitHub/SIRproject /Users/valentinamoruzzi/Documents/GitHub/SIRproject /Users/valentinamoruzzi/Documents/GitHub/SIRproject /Users/valentinamoruzzi/Documents/GitHub/SIRproject /Users/valentinamoruzzi/Documents/GitHub/SIRproject/CMakeFiles/Experimental.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/Experimental.dir/depend
 

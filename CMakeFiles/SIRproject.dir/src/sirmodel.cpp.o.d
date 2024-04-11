@@ -1,6 +1,6 @@
 CMakeFiles/SIRproject.dir/src/sirmodel.cpp.o: \
-  /Users/valentinamoruzzi/Documents/Github/SIRproject/src/sirmodel.cpp \
-  /Users/valentinamoruzzi/Documents/Github/SIRproject/include/sirdata.hpp \
+  /Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodel.cpp \
+  /Users/valentinamoruzzi/Documents/GitHub/SIRproject/include/sirdata.hpp \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/string \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/pthread.h \
@@ -139,7 +139,7 @@ CMakeFiles/SIRproject.dir/src/sirmodel.cpp.o: \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/_types/_wctrans_t.h \
-  /Users/valentinamoruzzi/Documents/Github/SIRproject/include/sirmodel.hpp \
+  /Users/valentinamoruzzi/Documents/GitHub/SIRproject/include/sirmodel.hpp \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/vector \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__bit_reference \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/climits \

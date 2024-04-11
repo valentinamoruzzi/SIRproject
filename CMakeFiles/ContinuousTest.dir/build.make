@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /Users/valentinamoruzzi/Documents/GitHub/SIRproject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/valentinamoruzzi/Documents/Github/SIRproject
+CMAKE_BINARY_DIR = /Users/valentinamoruzzi/Documents/GitHub/SIRproject
 
 # Utility rule file for ContinuousTest.
 
@@ -82,6 +82,6 @@ CMakeFiles/ContinuousTest.dir/clean:
 .PHONY : CMakeFiles/ContinuousTest.dir/clean
 
 CMakeFiles/ContinuousTest.dir/depend:
-	cd /Users/valentinamoruzzi/Documents/Github/SIRproject && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/valentinamoruzzi/Documents/GitHub/SIRproject /Users/valentinamoruzzi/Documents/Github/SIRproject /Users/valentinamoruzzi/Documents/Github/SIRproject /Users/valentinamoruzzi/Documents/Github/SIRproject /Users/valentinamoruzzi/Documents/Github/SIRproject/CMakeFiles/ContinuousTest.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/valentinamoruzzi/Documents/GitHub/SIRproject && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/valentinamoruzzi/Documents/GitHub/SIRproject /Users/valentinamoruzzi/Documents/GitHub/SIRproject /Users/valentinamoruzzi/Documents/GitHub/SIRproject /Users/valentinamoruzzi/Documents/GitHub/SIRproject /Users/valentinamoruzzi/Documents/GitHub/SIRproject/CMakeFiles/ContinuousTest.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/ContinuousTest.dir/depend
 

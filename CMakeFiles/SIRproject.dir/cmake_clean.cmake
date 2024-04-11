@@ -21,6 +21,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/SIRproject.dir/src/sirmodel.cpp.o.d"
   "CMakeFiles/SIRproject.dir/src/sirmodelextended.cpp.o"
   "CMakeFiles/SIRproject.dir/src/sirmodelextended.cpp.o.d"
+  "CMakeFiles/SIRproject.dir/src/sirprint.cpp.o"
+  "CMakeFiles/SIRproject.dir/src/sirprint.cpp.o.d"
   "SIRproject"
   "SIRproject.pdb"
 )

@@ -7,6 +7,11 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
+  "/Library/Frameworks/SFML.framework/Resources/CMake/SFMLConfig.cmake"
+  "/Library/Frameworks/SFML.framework/Resources/CMake/SFMLConfigDependencies.cmake"
+  "/Library/Frameworks/SFML.framework/Resources/CMake/SFMLConfigVersion.cmake"
+  "/Library/Frameworks/SFML.framework/Resources/CMake/SFMLSharedTargets-release.cmake"
+  "/Library/Frameworks/SFML.framework/Resources/CMake/SFMLSharedTargets.cmake"
   "CMakeFiles/3.29.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.29.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.29.1/CMakeSystem.cmake"
@@ -36,11 +41,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/Cellar/cmake/3.29.1/share/cmake/Modules/Platform/Darwin-Initialize.cmake"
   "/usr/local/Cellar/cmake/3.29.1/share/cmake/Modules/Platform/Darwin.cmake"
   "/usr/local/Cellar/cmake/3.29.1/share/cmake/Modules/Platform/UnixPaths.cmake"
-  "/usr/local/lib/cmake/SFML/SFMLConfig.cmake"
-  "/usr/local/lib/cmake/SFML/SFMLConfigDependencies.cmake"
-  "/usr/local/lib/cmake/SFML/SFMLConfigVersion.cmake"
-  "/usr/local/lib/cmake/SFML/SFMLSharedTargets-release.cmake"
-  "/usr/local/lib/cmake/SFML/SFMLSharedTargets.cmake"
   )
 
 # The corresponding makefile is:

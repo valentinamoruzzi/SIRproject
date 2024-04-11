@@ -60,7 +60,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /Users/valentinamoruzzi/Documents/GitHub/SIRproject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/valentinamoruzzi/Documents/Github/SIRproject
+CMAKE_BINARY_DIR = /Users/valentinamoruzzi/Documents/GitHub/SIRproject
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -97,9 +97,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/valentinamoruzzi/Documents/Github/SIRproject/CMakeFiles /Users/valentinamoruzzi/Documents/Github/SIRproject//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/valentinamoruzzi/Documents/GitHub/SIRproject/CMakeFiles /Users/valentinamoruzzi/Documents/GitHub/SIRproject//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/valentinamoruzzi/Documents/Github/SIRproject/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/valentinamoruzzi/Documents/GitHub/SIRproject/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -767,6 +767,30 @@ src/sirmodelextended.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIRproject.dir/build.make CMakeFiles/SIRproject.dir/src/sirmodelextended.cpp.s
 .PHONY : src/sirmodelextended.cpp.s
 
+src/sirprint.o: src/sirprint.cpp.o
+.PHONY : src/sirprint.o
+
+# target to build an object file
+src/sirprint.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIRproject.dir/build.make CMakeFiles/SIRproject.dir/src/sirprint.cpp.o
+.PHONY : src/sirprint.cpp.o
+
+src/sirprint.i: src/sirprint.cpp.i
+.PHONY : src/sirprint.i
+
+# target to preprocess a source file
+src/sirprint.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIRproject.dir/build.make CMakeFiles/SIRproject.dir/src/sirprint.cpp.i
+.PHONY : src/sirprint.cpp.i
+
+src/sirprint.s: src/sirprint.cpp.s
+.PHONY : src/sirprint.s
+
+# target to generate assembly for a file
+src/sirprint.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIRproject.dir/build.make CMakeFiles/SIRproject.dir/src/sirprint.cpp.s
+.PHONY : src/sirprint.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -838,6 +862,9 @@ help:
 	@echo "... src/sirmodelextended.o"
 	@echo "... src/sirmodelextended.i"
 	@echo "... src/sirmodelextended.s"
+	@echo "... src/sirprint.o"
+	@echo "... src/sirprint.i"
+	@echo "... src/sirprint.s"
 .PHONY : help
 
 
