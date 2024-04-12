@@ -44,11 +44,11 @@ namespace Sirmodel{
         for (int i = 0; i < duration; i++ ){
 
             sirdata *state_i = &result.back();
-            const int newinf = (int)((get_beta()*state_i->get_susc()* state_i->get_inf())/pop_now);
-            const int newrec = (int)(get_gamma()*state_i->get_inf());
-            const int newsusc = (int)(get_alpha()*state_i ->get_rec());
+            const int newinf = (int)((get_beta() *state_i->get_susc()  *state_i->get_inf())/pop_now);
+            const int newrec = (int)(get_gamma() *state_i->get_inf());
+            const int newsusc = (int)(get_alpha() *state_i ->get_rec());
 
-            state -> set_susc(state_i -> get_susc()- newinf + newsusc);
+            state -> set_susc(state_i -> get_susc() - newinf + newsusc);
             state -> set_inf(state_i -> get_inf() + newinf - newrec); 
             state -> set_rec(state_i -> get_rec() + newrec - newsusc);
 

@@ -60,16 +60,16 @@ void sirprint::plot(vector<sirdata> &results, const int &duration){
    
    // setting window parameters
    sf::RenderWindow window(sf::VideoMode(1200, 800), "SFML plot", sf::Style::Default);
-   sf::Color canvasColor = sf::Color::White;
+   
 
    // setting plotting parameters
    plot_.setSize(sf::Vector2f(1200, 800));
    plot_.setTitleColor(sf::Color::Black);
-   plot_.setTitle("\t\t\t\t\t\t\t\t\t\t\t\t"+cfg->get_modeltype() + "\nRed: Susceptibles - Green: Removed - Blue: Infectiouses");
+   plot_.setTitle("\t\t\t\t\t\t\t\t\t\t\t\t"+cfg->get_modeltype() + "\nRed: Susceptibles - Green: Removed - Blue: Infected");
    plot_.setFont("./font.ttf");
    plot_.setXLabel("Time");
    plot_.setYLabel("Populations");
-   
+
 
    // Creating curves
    sf::plot::Curve &s_curve = plot_.createCurve("Susceptibles", sf::Color::Red);
@@ -77,10 +77,10 @@ void sirprint::plot(vector<sirdata> &results, const int &duration){
    s_curve.setFill(false);
    s_curve.setLabel("Susceptibles");
 
-   sf::plot::Curve &r_curve= plot_.createCurve("Removed", sf::Color::Green);
+   sf::plot::Curve &r_curve= plot_.createCurve("Recovered", sf::Color::Green);
    r_curve.setThickness(2);
    r_curve.setFill(false);
-   r_curve.setLabel("Removed");
+   r_curve.setLabel("Recovered");
    
    sf::plot::Curve &i_curve = plot_.createCurve("Infected", sf::Color::Blue);
    i_curve.setThickness(2);
@@ -100,7 +100,7 @@ void sirprint::plot(vector<sirdata> &results, const int &duration){
          if(event.type == sf::Event::Closed)
                window.close();
       }  
-      window.clear(); 
+      window.clear(sf::Color::White); 
       window.draw(plot_);
       window.display();
    }
