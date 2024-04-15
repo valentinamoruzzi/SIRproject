@@ -1,4 +1,4 @@
-##SIRproject
+## SIRproject
 La directory [include](SIRproject/include) comprende tutti gli header file (.hpp), mentre la directory [src](SIRproject/src) contiene i rispettivi file sorgente. 
 Nella directory [Test](SIRproject/Test) invece troviamo i doctest.
 La translation unit principale è costituita da [main.cpp](SIRproject/main.cpp).  
