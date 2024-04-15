@@ -109,17 +109,4 @@ int main() {
   } catch (const char *message) {
     cout << message << endl;
   }
-
-  /*try{
-        sirmodel *ex = new sirmodel(0.4,0.5);
-        cout << ex->get_beta() << endl;
-        cout << ex->get_gamma() << endl;
-        //cout << ex->get_alpha() << endl;
-        ex->generate_data(10);
-    }
-    catch(const char *message){
-        cout << message<< endl;
-    }
-    return 0;
-  */
 }

@@ -1,5 +1,6 @@
 #ifndef SFML_PLOT_CURVE_H
 #define SFML_PLOT_CURVE_H
+#define SFML_NO_DEPRECATED_WARNINGS
 
 #include "area.h"
 #include "line.h"

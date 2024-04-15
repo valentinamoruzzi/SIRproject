@@ -1,5 +1,6 @@
 #ifndef SFML_PLOT_LINE_H
 #define SFML_PLOT_LINE_H
+#define SFML_NO_DEPRECATED_WARNINGS
 
 #include <SFML/Graphics.hpp>
 
