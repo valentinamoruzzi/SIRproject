@@ -7,6 +7,7 @@ sirprint::sirprint(sirmanage *c, sirmodel *sir) {
   set_cfg(c);
   set_model(sir);
 }
+
 sirprint::sirprint(sirmanage *c, sirmodelextended *sirs) {
   set_cfg(c);
   set_modelextended(sirs);
@@ -16,20 +17,20 @@ void sirprint::set_cfg(sirmanage *c) {
   if (c != NULL)
     cfg = c;
   else
-    throw "Configuratore nullo";
+    throw "Configurator tool is empty";
 }
 void sirprint::set_model(sirmodel *sir_) {
   if (sir_ != NULL)
     sir = sir_;
   else
-    throw "Configuratore nullo";
+    throw "Unknown model";
 }
 
 void sirprint::set_modelextended(sirmodelextended *sirs_) {
   if (sirs_ != NULL)
     sirs = sirs_;
   else
-    throw "Configuratore nullo";
+    throw "Unknown model";
 }
 
 void sirprint::print_tostdout(vector<sirdata> results, const int &duration) {
@@ -129,6 +130,6 @@ void sirprint::printdata(vector<sirdata> results, const int &duration) {
   else if (cfg->get_output_type() == 'P')
     plot(results, duration);
   else
-    throw "Errore: output errato";
+    throw "Error: unknown output type";
 }
 } // namespace Sirmodel
