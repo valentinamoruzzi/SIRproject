@@ -9,16 +9,15 @@
 using namespace std;
 using namespace Sirmodel;
 
-bool isequal(vector<sirdata> v1, vector<sirdata> v2) {
-  int i = 0;
-  int dim = (int)v1.size();
-  while (v1[i] == v2[i] && i < dim)
-    i++;
+bool isequal(vector<sirdata> v1, vector<sirdata> v2) int i = 0;
+int dim = (int)v1.size();
+while (v1[i] == v2[i] && i < dim)
+  i++;
 
-  if (i == dim)
-    return true;
-  else
-    return false;
+if (i == dim){
+  return true;
+else
+  return false;
 }
 TEST_CASE("Testing class sirdata ") {
   sirdata test_sm = {3980, 2, 0};
