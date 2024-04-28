@@ -1,70 +1,68 @@
 #include "sirmanage.hpp"
+#include <algorithm>
+#include <fstream>
+#include <string>
 
-using namespace std;
-
-namespace Sirmodel {
-
-sirmanage::sirmanage() {}
-sirmanage::~sirmanage() {
-  if (sr != NULL)
-    sr->close();
-  if (sw != NULL)
-    sw->close();
-}
-sirmanage::sirmanage(const string &in_filep) {
-  string str;
+sirmanage::sirmanage(const std::string &in_filep) {
+  std::string str;
   set_in_filepath(in_filep);
-  sr = new ifstream(in_filep, ios::in); // riguarda
+  std::ifstream sr(in_filep, std::ios::in); // riguarda
 
   // Reading output type
-  if (sr != NULL) {
+  //if (sr != NULL) {
     str = read_row_fromfile();
     set_output_type(str[0]);
-  }
+  //}
 
   // Reading output file
   if (sr != NULL)
     str = read_row_fromfile();
   if (str != "") {
     set_out_filepath(str);
-    sw = new ofstream(get_out_filepath());
+    sw = new std::ofstream(get_out_filepath());
   }
 }
 
-string sirmanage::get_modeltype() { return modeltype; }
-void sirmanage::set_modeltype(const string &m) {
+std::string sirmanage::get_modeltype() { return modeltype; }
+void sirmanage::set_modeltype(const std::string &m) {
   if (m != "")
     modeltype = m;
   else
     throw "ERROR";
 }
 
-string sirmanage::get_in_filepath() { return in_filepath; }
-void sirmanage::set_in_filepath(const string &filepath) {
-  if (filepath != "")
+std::string sirmanage::get_in_filepath() { return in_filepath; }
+void sirmanage::set_in_filepath(const std::string &filepath) {
+  if (filepath != "") {
     in_filepath = filepath;
-  else
+  }
+  else {
     throw "Error: file path is empty";
+  }
 }
 
-string sirmanage::get_out_filepath() { return out_filepath; }
-void sirmanage::set_out_filepath(const string &filepath) {
-  if (filepath != "")
+std::string sirmanage::get_out_filepath() { return out_filepath; }
+void sirmanage::set_out_filepath(const std::string &filepath) {
+  if (filepath != "") {
     out_filepath = filepath;
-  else
+  }
+  else {
     throw "Error: file path is empty";
+  }
 }
 
 char sirmanage::get_output_type() { return output_type; }
 void sirmanage::set_output_type(const char &out_type) {
-  if (out_type != '\0')
+  if (out_type != '\0'){
     output_type = out_type;
-  else
+  }
+  else {
     throw "Error: file path is empty";
+  }
 }
 
-string sirmanage::read_row_fromfile() {
-  string row;
+std::string sirmanage::read_row_fromfile() {
+  std::string row;
   int pos = -1; // riguarda
   if (sr != NULL) {
     getline(*sr, row);
@@ -80,6 +78,5 @@ string sirmanage::read_row_fromfile() {
   } else
     return "";
 }
+std::ofstream sirmanage::get_sw() { return sw; }
 
-ofstream *sirmanage::get_sw() { return sw; }
-} // namespace Sirmodel

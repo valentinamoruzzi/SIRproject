@@ -1,38 +1,31 @@
 #ifndef sirmodel_HPP
 #define sirmodel_HPP
-
 #include "sirdata.hpp"
-#include <cstddef>
-#include <vector>
+#include <iostream>
 
-#define BETA_DEFAULT 0.6
-#define GAMMA_DEFAULT 0.1
-
-using namespace std;
-namespace Sirmodel {
 class sirmodel {
 private:
   double beta;
   double gamma;
   double R0;
-
-protected:
-  void set_R0();
+  static constexpr double beta_default = 0.6;
+  static constexpr double gamma_default = 0.1;
+  sirdata state;
 
 public:
-  sirdata *state = NULL;
   sirmodel();
-  sirmodel(const double &b, const double &g);
-  sirmodel(sirdata *state, const double &b, const double &g);
-  sirdata *get_state();
-  void set_state(sirdata *s);
-  double get_beta();
-  void set_beta(const double &b);
-  double get_gamma();
-  void set_gamma(const double &g);
-  double get_R0();
+  sirmodel( double b, double g);
+  sirmodel(const sirdata &state, double b, double g);
+  sirdata get_state();
+  void set_state(const sirdata& s);
+  double get_beta() const;
+  void set_beta( double b);
+  double get_gamma()const ;
+  void set_gamma(double g);
+  double get_R0() const;
+  void set_R0();
 
-  vector<sirdata> generate_data(const int &duration);
+  std::vector<sirdata> generate_data(int duration);
 };
-} // namespace Sirmodel
+
 #endif

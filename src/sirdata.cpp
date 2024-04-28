@@ -1,8 +1,6 @@
 #include "sirdata.hpp"
-#include <iostream>
+#include <string>
 #include <sstream>
-
-using namespace std;
 
 sirdata::sirdata(const int &susceptibles, const int &infected,
                  const int &recovered) {
@@ -13,8 +11,8 @@ sirdata::sirdata(const int &susceptibles, const int &infected,
   set_pop(susceptibles + infected + recovered);
 }
 
-int sirdata::get_susc() { return susc; }
-void sirdata::set_susc(const int &susceptibles) {
+int sirdata::get_susc() const { return susc; }
+void sirdata::set_susc( int susceptibles) {
 
   if (susceptibles < 0)
     throw "Error: susceptibles less than 0\n";
@@ -22,23 +20,23 @@ void sirdata::set_susc(const int &susceptibles) {
     susc = susceptibles;
 }
 
-int sirdata::get_inf() { return inf; }
-void sirdata::set_inf(const int &infected) {
+int sirdata::get_inf() const { return inf; }
+void sirdata::set_inf( int infected) {
   if (infected < 0)
     throw "Error: infected less than 0\n";
   else
     inf = infected;
 }
 
-int sirdata::get_rec() { return rec; }
-void sirdata::set_rec(const int &recovered) {
+int sirdata::get_rec() const { return rec; }
+void sirdata::set_rec( int recovered) {
   if (recovered < 0)
     throw "Error: recovered less than 0\n";
   else
     rec = recovered;
 }
 
-int sirdata::get_pop() { return pop; }
+int sirdata::get_pop() const { return pop; }
 void sirdata::set_pop(const int population) {
   if (population < 0)
     throw "Error: population less than 0\n";
@@ -54,16 +52,16 @@ bool sirdata::check_pop() {
     return false;
 }
 
-string sirdata::toString() {
+std::string sirdata::toString() {
 
-  stringstream ss;
-  ss << get_susc() << ";" << get_inf() << ";" << get_rec() << endl;
+  std::stringstream ss;
+  ss << get_susc() << ";" << get_inf() << ";" << get_rec() << '\n';
   return ss.str();
 }
 
-bool sirdata::operator==(sirdata d) {
-  if (d.get_susc() == get_susc() && d.get_inf() == get_inf() &&
-      d.get_rec() == d.get_rec())
+static bool sirdata::operator==(const sirdata &d1, const sirdata &d2) {
+  if (d1.get_susc() == d2.get_susc() && d1.get_inf() == d2.get_inf() &&
+      d1.get_rec() == d2.get_rec())
     return true;
   else
     return false;

@@ -1,43 +1,35 @@
 #ifndef sirmanage_HPP
 #define sirmanage_HPP
-#include <algorithm>
-#include <fstream>
 #include <iostream>
-#include <string>
 
-using namespace std;
-
-namespace Sirmodel {
 class sirmanage {
 private:
-  string in_filepath;
-  string out_filepath;
+  std::string in_filepath;
+  std::string out_filepath;
   char output_type;
-  string modeltype;
-  ifstream *sr = NULL;
-  ofstream *sw = NULL;
+  std::string modeltype;
+  std::ifstream sr;
+  std::ofstream sw;
 
 public:
-  sirmanage();
-  ~sirmanage();
-  sirmanage(const string &in_filep);
+  sirmanage() = default ;
+  sirmanage(const std::string &in_filep);
 
-  string get_modeltype();
-  void set_modeltype(const string &m);
+  std::string get_modeltype();
+  void set_modeltype(const std::string &m);
 
-  string get_in_filepath();
-  void set_in_filepath(const string &filepath);
+  std::string get_in_filepath();
+  void set_in_filepath(const std::string &filepath);
 
-  string get_out_filepath();
-  void set_out_filepath(const string &filepath);
+  std::string get_out_filepath();
+  void set_out_filepath(const std::string &filepath);
 
   char get_output_type();
   void set_output_type(const char &out_type);
 
-  ofstream *get_sw();
+  std::ofstream get_sw();
 
-  string read_row_fromfile();
+  std::string read_row_fromfile();
 };
 
-} // namespace Sirmodel
 #endif

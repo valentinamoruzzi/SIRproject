@@ -1,77 +1,81 @@
 #include "sirprint.hpp"
-using namespace std;
+#include "sirdata.hpp"
+#include "sirmanage.hpp"
+#include "sirmodel.hpp"
+#include "sirmodelextended.hpp"
+#include <fstream>
+#include <string>
+#include <iomanip>
 
-namespace Sirmodel {
-
-sirprint::sirprint(sirmanage *c, sirmodel *sir) {
+sirprint::sirprint(const sirmanage &c, const sirmodel &sir) {
   set_cfg(c);
   set_model(sir);
 }
 
-sirprint::sirprint(sirmanage *c, sirmodelextended *sirs) {
+sirprint::sirprint(const sirmanage &c, const sirmodelextended &sirs) {
   set_cfg(c);
   set_modelextended(sirs);
 }
 
-void sirprint::set_cfg(sirmanage *c) {
+void sirprint::set_cfg(const sirmanage &c) {
   if (c != NULL)
     cfg = c;
   else
     throw "Configurator tool is empty";
 }
-void sirprint::set_model(sirmodel *sir_) {
+void sirprint::set_model(const sirmodel &sir_) {
   if (sir_ != NULL)
     sir = sir_;
   else
     throw "Unknown model";
 }
 
-void sirprint::set_modelextended(sirmodelextended *sirs_) {
+void sirprint::set_modelextended(const sirmodelextended &sirs_) {
   if (sirs_ != NULL)
     sirs = sirs_;
   else
     throw "Unknown model";
 }
 
-void sirprint::print_tostdout(vector<sirdata> results, const int &duration) {
+void sirprint::print_tostdout(vector<sirdata> results, int duration) {
 
   int pop = results[0].get_susc() + results[0].get_inf() + results[0].get_rec();
 
-  cout << "|" << setw(5) << "Time" << "|" << setw(5) << "Susc" << "|" << setw(5)
+  std::cout << "|" << setw(5) << "Time" << "|" << setw(5) << "Susc" << "|" << setw(5)
        << "Inf" << "|" << setw(5) << "Rec" << "|" << setw(5) << "Beta" << "|"
        << setw(5) << "Gamma";
 
-  if (cfg->get_modeltype() == "sirmodelextended")
-    cout << "|" << setw(5) << "Alpha";
+  if (cfg.get_modeltype() == "sirmodelextended")
+    std::cout << "|" << setw(5) << "Alpha";
 
-  cout << "|" << setw(5) << "Pop" << "|" << endl;
+  std::cout << "|" << setw(5) << "Pop" << "|" << "\n";
   for (int day = 0; day < duration; day++) {
 
-    cout << "|" << setw(5) << day << "|" << setw(5) << results[day].get_susc()
+    std::cout << "|" << setw(5) << day << "|" << setw(5) << results[day].get_susc()
          << "|" << setw(5) << results[day].get_inf() << "|" << setw(5)
          << results[day].get_rec();
-    if (cfg->get_modeltype() == "sirmodel")
-      cout << "|" << setw(5) << sir->get_beta();
+    if (cfg.get_modeltype() == "sirmodel")
+      std::cout << "|" << setw(5) << sir->get_beta();
     else
-      cout << "|" << setw(5) << sirs->get_beta();
-    if (cfg->get_modeltype() == "sirmodel")
-      cout << "|" << setw(5) << sir->get_gamma();
+      std::cout << "|" << setw(5) << sirs->get_beta();
+    if (cfg.get_modeltype() == "sirmodel")
+      std::cout << "|" << setw(5) << sir->get_gamma();
     else
-      cout << "|" << setw(5) << sirs->get_gamma();
-    if (cfg->get_modeltype() == "sirmodelextended")
-      cout << "|" << setw(5) << sirs->get_alpha();
-    cout << "|" << setw(5) << pop << "|" << endl;
+      std::cout << "|" << setw(5) << sirs->get_gamma();
+    if (cfg.get_modeltype() == "sirmodelextended")
+      std::cout << "|" << setw(5) << sirs->get_alpha();
+    std::cout << "|" << setw(5) << pop << "|" << endl;
   }
 }
-void sirprint::print_tofile(vector<sirdata> results, const int &duration) {
+void sirprint::print_tofile(std::vector<sirdata> results, int duration) {
   for (int i = 0; i < duration; i++) {
-    *cfg->get_sw() << results[i].toString() << endl;
+    cfg.get_sw() << results[i].toString() << "\n";
   }
 }
 void sirprint::draw(sf::RenderTarget &target, sf::RenderStates states) const {
   target.draw(plot_, states);
 }
-void sirprint::plot(vector<sirdata> &results, const int &duration) {
+void sirprint::plot(vector<sirdata> &results, int duration) {
 
   // setting window parameters
   sf::RenderWindow window(sf::VideoMode(1200, 800), "SFML plot",
@@ -80,7 +84,7 @@ void sirprint::plot(vector<sirdata> &results, const int &duration) {
   // setting plotting parameters
   plot_.setSize(sf::Vector2f(1200, 800));
   plot_.setTitleColor(sf::Color::Black);
-  plot_.setTitle("\t\t\t\t\t\t\t\t\t\t\t\t" + cfg->get_modeltype() +
+  plot_.setTitle("\t\t\t\t\t\t\t\t\t\t\t\t" + cfg.get_modeltype() +
                  "\nRed: Susceptibles - Green: Removed - Blue: Infected");
   plot_.setFont("./font.ttf");
   plot_.setXLabel("Time");
@@ -121,15 +125,18 @@ void sirprint::plot(vector<sirdata> &results, const int &duration) {
   }
 }
 
-void sirprint::printdata(vector<sirdata> results, const int &duration) {
-  cout << cfg->get_output_type() << endl;
-  if (cfg->get_output_type() == 'S')
+void sirprint::printdata(std::vector<sirdata> results, int duration) {
+  std::cout << cfg.get_output_type() << "\n";
+  if (cfg.get_output_type() == 'S') {
     print_tostdout(results, duration);
-  else if (cfg->get_output_type() == 'F')
+    }
+  else if (cfg.get_output_type() == 'F') {
     print_tofile(results, duration);
-  else if (cfg->get_output_type() == 'P')
+    }
+  else if (cfg.get_output_type() == 'P'){
     plot(results, duration);
-  else
+    }
+  else{
     throw "Error: unknown output type";
+    }
 }
-} // namespace Sirmodel
