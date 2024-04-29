@@ -1,73 +1,47 @@
 #include "sirprint.hpp"
-#include "sirdata.hpp"
-#include "sirmanage.hpp"
-#include "sirmodel.hpp"
-#include "sirmodelextended.hpp"
 #include <fstream>
 #include <string>
 #include <iomanip>
+#include <vector>
+#include <iostream>
+#include <SFML/Graphics.hpp>
+#include <SFML/System.hpp>
+#include "sfml/plot.h"
 
-sirprint::sirprint(const sirmanage &c, const sirmodel &sir) {
-  set_cfg(c);
-  set_model(sir);
-}
+sirprint::sirprint(const sirmanage &c, const sirmodel &sir) : cfg(c.get_in_filepath()),sir(sir){}
+sirprint::sirprint(const sirmanage &c, const sirmodel &sir) : cfg(c.get_in_filepath()),sirs(sirs){}
 
-sirprint::sirprint(const sirmanage &c, const sirmodelextended &sirs) {
-  set_cfg(c);
-  set_modelextended(sirs);
-}
-
-void sirprint::set_cfg(const sirmanage &c) {
-  if (c != NULL)
-    cfg = c;
-  else
-    throw "Configurator tool is empty";
-}
-void sirprint::set_model(const sirmodel &sir_) {
-  if (sir_ != NULL)
-    sir = sir_;
-  else
-    throw "Unknown model";
-}
-
-void sirprint::set_modelextended(const sirmodelextended &sirs_) {
-  if (sirs_ != NULL)
-    sirs = sirs_;
-  else
-    throw "Unknown model";
-}
-
-void sirprint::print_tostdout(vector<sirdata> results, int duration) {
+void sirprint::print_tostdout(const std::vector<sirdata> &results, int duration) {
 
   int pop = results[0].get_susc() + results[0].get_inf() + results[0].get_rec();
 
-  std::cout << "|" << setw(5) << "Time" << "|" << setw(5) << "Susc" << "|" << setw(5)
-       << "Inf" << "|" << setw(5) << "Rec" << "|" << setw(5) << "Beta" << "|"
-       << setw(5) << "Gamma";
+  std::cout << "|" << std::setw(5) << "Time" << "|" << std::setw(5) << "Susc" << "|" << std::setw(5)
+       << "Inf" << "|" << std::setw(5) << "Rec" << "|" << std::setw(5) << "Beta" << "|"
+       << std::setw(5) << "Gamma";
 
   if (cfg.get_modeltype() == "sirmodelextended")
-    std::cout << "|" << setw(5) << "Alpha";
+    std::cout << "|" << std::setw(5) << "Alpha";
 
-  std::cout << "|" << setw(5) << "Pop" << "|" << "\n";
+  std::cout << "|" << std::setw(5) << "Pop" << "|" << "\n";
   for (int day = 0; day < duration; day++) {
 
-    std::cout << "|" << setw(5) << day << "|" << setw(5) << results[day].get_susc()
-         << "|" << setw(5) << results[day].get_inf() << "|" << setw(5)
+    std::cout << "|" << std::setw(5) << day << "|" << std::setw(5) << results[day].get_susc()
+         << "|" << std::setw(5) << results[day].get_inf() << "|" << std::setw(5)
          << results[day].get_rec();
     if (cfg.get_modeltype() == "sirmodel")
-      std::cout << "|" << setw(5) << sir->get_beta();
+      std::cout << "|" << std::setw(5) << sir.get_beta();
     else
-      std::cout << "|" << setw(5) << sirs->get_beta();
+      std::cout << "|" << std::setw(5) << sirs.get_beta();
     if (cfg.get_modeltype() == "sirmodel")
-      std::cout << "|" << setw(5) << sir->get_gamma();
+      std::cout << "|" << std::setw(5) << sir.get_gamma();
     else
-      std::cout << "|" << setw(5) << sirs->get_gamma();
+      std::cout << "|" << std::setw(5) << sirs.get_gamma();
     if (cfg.get_modeltype() == "sirmodelextended")
-      std::cout << "|" << setw(5) << sirs->get_alpha();
-    std::cout << "|" << setw(5) << pop << "|" << endl;
+      std::cout << "|" << std::setw(5) << sirs.get_alpha();
+    std::cout << "|" << std::setw(5) << pop << "|" << "\n";
   }
 }
-void sirprint::print_tofile(std::vector<sirdata> results, int duration) {
+void sirprint::print_tofile(const std::vector<sirdata> &results, int duration) {
   for (int i = 0; i < duration; i++) {
     cfg.get_sw() << results[i].toString() << "\n";
   }
@@ -75,7 +49,7 @@ void sirprint::print_tofile(std::vector<sirdata> results, int duration) {
 void sirprint::draw(sf::RenderTarget &target, sf::RenderStates states) const {
   target.draw(plot_, states);
 }
-void sirprint::plot(vector<sirdata> &results, int duration) {
+void sirprint::plot(const std::vector<sirdata> &results, int duration) {
 
   // setting window parameters
   sf::RenderWindow window(sf::VideoMode(1200, 800), "SFML plot",
@@ -125,7 +99,7 @@ void sirprint::plot(vector<sirdata> &results, int duration) {
   }
 }
 
-void sirprint::printdata(std::vector<sirdata> results, int duration) {
+void sirprint::printdata(const std::vector<sirdata> &results, int duration) {
   std::cout << cfg.get_output_type() << "\n";
   if (cfg.get_output_type() == 'S') {
     print_tostdout(results, duration);
@@ -137,6 +111,6 @@ void sirprint::printdata(std::vector<sirdata> results, int duration) {
     plot(results, duration);
     }
   else{
-    throw "Error: unknown output type";
+    throw std::runtime_error{ "Error: unknown output type\n"};
     }
 }

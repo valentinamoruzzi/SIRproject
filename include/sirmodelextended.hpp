@@ -12,7 +12,7 @@ public:
   sirmodelextended();
   sirmodelextended( double a);
   sirmodelextended( double b,  double g, double a);
-  double get_alpha();
+  double get_alpha() const ;
   void set_alpha( double a);
   std::vector<sirdata> generate_data( int duration);
 };

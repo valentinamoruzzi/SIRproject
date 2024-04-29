@@ -1,6 +1,7 @@
 #ifndef sirmanage_HPP
 #define sirmanage_HPP
 #include <iostream>
+#include <fstream>
 
 class sirmanage {
 private:
@@ -12,24 +13,26 @@ private:
   std::ofstream sw;
 
 public:
-  sirmanage() = default ;
+  sirmanage() ;
   sirmanage(const std::string &in_filep);
 
-  std::string get_modeltype();
+  std::string get_modeltype() const;
   void set_modeltype(const std::string &m);
 
-  std::string get_in_filepath();
+  std::string get_in_filepath() const;
   void set_in_filepath(const std::string &filepath);
 
-  std::string get_out_filepath();
+  std::string get_out_filepath() const;
   void set_out_filepath(const std::string &filepath);
 
-  char get_output_type();
+  char get_output_type() const;
   void set_output_type(const char &out_type);
 
-  std::ofstream get_sw();
+  std::ofstream& get_sw();
 
   std::string read_row_fromfile();
+  static bool isinteger(const std::string &s);
+  static bool isfloatnumber(const std::string &s);
 };
 
 #endif

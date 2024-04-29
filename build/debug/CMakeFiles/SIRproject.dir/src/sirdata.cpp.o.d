@@ -1,6 +1,6 @@
-CMakeFiles/SIRproject.dir/main.cpp.o: \
+CMakeFiles/SIRproject.dir/src/sirdata.cpp.o: \
   /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/share/asan_blacklist.txt \
-  /Users/valentinamoruzzi/Documents/GitHub/SIRproject/main.cpp \
+  /Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirdata.cpp \
   /Users/valentinamoruzzi/Documents/GitHub/SIRproject/include/sirdata.hpp \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__config \
@@ -226,101 +226,4 @@ CMakeFiles/SIRproject.dir/main.cpp.o: \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__bsd_locale_defaults.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/bitset \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__bit_reference \
-  /Users/valentinamoruzzi/Documents/GitHub/SIRproject/include/sirmanage.hpp \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/fstream \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/filesystem \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/stack \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/deque \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__split_buffer \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/iomanip \
-  /Users/valentinamoruzzi/Documents/GitHub/SIRproject/include/sirmodel.hpp \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/vector \
-  /Users/valentinamoruzzi/Documents/GitHub/SIRproject/include/sirmodelextended.hpp \
-  /Users/valentinamoruzzi/Documents/GitHub/SIRproject/include/sirprint.hpp \
-  /Users/valentinamoruzzi/Documents/GitHub/SIRproject/include/sfml/plot.h \
-  /Library/Frameworks/./SFML.framework/Headers/Graphics.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Window.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/System.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Config.hpp \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/TargetConditionals.h \
-  /Library/Frameworks/./SFML.framework/Headers/System/Clock.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/System/Export.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/System/Time.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/System/Err.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/System/FileInputStream.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/System/InputStream.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/System/NonCopyable.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/System/Lock.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/System/MemoryInputStream.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/System/Mutex.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/System/Sleep.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/System/String.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/System/Utf.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/System/Utf.inl \
-  /Library/Frameworks/./SFML.framework/Headers/System/String.inl \
-  /Library/Frameworks/./SFML.framework/Headers/System/Thread.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/System/Thread.inl \
-  /Library/Frameworks/./SFML.framework/Headers/System/ThreadLocal.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/System/ThreadLocalPtr.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/System/ThreadLocalPtr.inl \
-  /Library/Frameworks/./SFML.framework/Headers/System/Vector2.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/System/Vector2.inl \
-  /Library/Frameworks/./SFML.framework/Headers/System/Vector3.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/System/Vector3.inl \
-  /Library/Frameworks/./SFML.framework/Headers/Window/Clipboard.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Window/Export.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Window/Context.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Window/GlResource.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Window/ContextSettings.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Window/Cursor.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Window/Event.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Window/Joystick.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Window/Keyboard.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Window/Mouse.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Window/Sensor.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Window/Touch.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Window/VideoMode.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Window/Window.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Window/WindowHandle.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Window/WindowStyle.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Graphics/BlendMode.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Graphics/Export.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Graphics/CircleShape.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Graphics/Shape.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Graphics/Drawable.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Graphics/RenderStates.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Graphics/Transform.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Graphics/Rect.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Graphics/Rect.inl \
-  /Library/Frameworks/./SFML.framework/Headers/Graphics/Transformable.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Graphics/VertexArray.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Graphics/Vertex.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Graphics/Color.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Graphics/PrimitiveType.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Graphics/ConvexShape.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Graphics/Font.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Graphics/Glyph.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Graphics/Texture.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Graphics/Image.hpp \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/map \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__tree \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__node_handle \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/optional \
-  /Library/Frameworks/./SFML.framework/Headers/Graphics/RectangleShape.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Graphics/RenderTarget.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Graphics/View.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Graphics/RenderTexture.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Graphics/RenderWindow.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Graphics/Shader.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Graphics/Glsl.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Graphics/Glsl.inl \
-  /Library/Frameworks/./SFML.framework/Headers/Graphics/Sprite.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Graphics/Text.hpp \
-  /Library/Frameworks/./SFML.framework/Headers/Graphics/VertexBuffer.hpp \
-  /Users/valentinamoruzzi/Documents/GitHub/SIRproject/include/sfml/axis.h \
-  /Users/valentinamoruzzi/Documents/GitHub/SIRproject/include/sfml/curve.h \
-  /Users/valentinamoruzzi/Documents/GitHub/SIRproject/include/sfml/area.h \
-  /Users/valentinamoruzzi/Documents/GitHub/SIRproject/include/sfml/line.h \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/list \
-  /Users/valentinamoruzzi/Documents/GitHub/SIRproject/include/sfml/grid.h \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cmath
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/sstream

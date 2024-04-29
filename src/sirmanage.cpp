@@ -3,69 +3,71 @@
 #include <fstream>
 #include <string>
 
+sirmanage::sirmanage():sirmanage("sirmodel.cfg"){}
+
 sirmanage::sirmanage(const std::string &in_filep) {
-  std::string str;
+  
   set_in_filepath(in_filep);
-  std::ifstream sr(in_filep, std::ios::in); // riguarda
+  sr.open(in_filep, std::ios::in); // riguarda
 
   // Reading output type
-  //if (sr != NULL) {
-    str = read_row_fromfile();
+    std:: string str = read_row_fromfile();
     set_output_type(str[0]);
-  //}
 
   // Reading output file
-  if (sr != NULL)
-    str = read_row_fromfile();
-  if (str != "") {
+  str = read_row_fromfile();
+  if (!str.empty()) {
     set_out_filepath(str);
-    sw = new std::ofstream(get_out_filepath());
+    std::ofstream sw(get_out_filepath());
   }
 }
 
-std::string sirmanage::get_modeltype() { return modeltype; }
+std::string sirmanage::get_modeltype() const { return modeltype; }
 void sirmanage::set_modeltype(const std::string &m) {
-  if (m != "")
+  if (!m.empty()){
     modeltype = m;
-  else
-    throw "ERROR";
+  }
+  else {
+    throw std::runtime_error{"Error: model type is empty\n"};
+  }
 }
 
-std::string sirmanage::get_in_filepath() { return in_filepath; }
+std::string sirmanage::get_in_filepath() const { return in_filepath; }
 void sirmanage::set_in_filepath(const std::string &filepath) {
-  if (filepath != "") {
+  if (!filepath.empty()) {
     in_filepath = filepath;
   }
   else {
-    throw "Error: file path is empty";
+    throw std::runtime_error{"Error: file path is empty\n"};
   }
 }
 
-std::string sirmanage::get_out_filepath() { return out_filepath; }
+std::string sirmanage::get_out_filepath() const { return out_filepath; }
 void sirmanage::set_out_filepath(const std::string &filepath) {
-  if (filepath != "") {
+  if (!filepath.empty()) {
     out_filepath = filepath;
   }
   else {
-    throw "Error: file path is empty";
+    throw std::runtime_error{ "Error: file path is empty\n"};
   }
 }
 
-char sirmanage::get_output_type() { return output_type; }
+char sirmanage::get_output_type() const { return output_type; }
 void sirmanage::set_output_type(const char &out_type) {
   if (out_type != '\0'){
     output_type = out_type;
   }
   else {
-    throw "Error: file path is empty";
+    throw std::runtime_error{ "Error: file path is empty\n"};
   }
 }
 
 std::string sirmanage::read_row_fromfile() {
   std::string row;
   int pos = -1; // riguarda
-  if (sr != NULL) {
-    getline(*sr, row);
+
+  if (sr.is_open()) {
+    getline(sr, row);
     pos = row.find("=");
     if (pos != -1) {
       row.erase(remove(row.begin(), row.end(), ' '), row.end());
@@ -76,7 +78,20 @@ std::string sirmanage::read_row_fromfile() {
     else
       return "";
   } else
+  std::runtime_error{"Error: input file is closed\n"};
     return "";
 }
-std::ofstream sirmanage::get_sw() { return sw; }
+std::ofstream &sirmanage::get_sw() { return sw; }
+
+bool sirmanage:: isinteger(const std::string &s){
+  std::string::const_iterator it = s.begin();
+  while(it != s.end() && std::isdigit(*it)) ++it;
+  return !s.empty() && it == s.end();
+}
+
+bool sirmanage:: isfloatnumber(const std::string &s){
+  std::string::const_iterator it = s.begin();
+  while(it != s.end() && (std::isdigit(*it)) || *it == '.') ++it;
+  return !s.empty() && it == s.end();
+}
 

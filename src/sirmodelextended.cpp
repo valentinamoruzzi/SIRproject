@@ -22,21 +22,20 @@ sirmodelextended::sirmodelextended(double b, double g,
   set_R0();
 }
 
-double sirmodelextended::get_alpha() { return alpha; }
+double sirmodelextended::get_alpha() const { return alpha; }
 void sirmodelextended::set_alpha( double a) {
   if (a < 0 && a > 1)
-    throw "Error: the value of alpha is not correct";
+    throw std::runtime_error{ "Error: the value of alpha is not correct"};
   else
     alpha = a;
 }
 
 std::vector<sirdata> sirmodelextended::generate_data( int duration) {
   std::vector<sirdata> result;
-  //if (state != NULL) {
-    result.push_back(
-        state); 
+  sirdata s = get_state();
+    result.push_back(s); 
 
-    const int pop_now = state.get_pop(); // now
+    const int pop_now = s.get_pop(); // now
     for (int i = 0; i < duration; i++) {
 
       sirdata state_i = result.back();
@@ -46,13 +45,13 @@ std::vector<sirdata> sirmodelextended::generate_data( int duration) {
       const int newrec = (int)(get_gamma() * state_i.get_inf());
       const int newsusc = (int)(get_alpha() * state_i.get_rec());
 
-      state.set_susc(state_i.get_susc() - newinf + newsusc);
-      state.set_inf(state_i.get_inf() + newinf - newrec);
-      state.set_rec(state_i.get_rec() + newrec - newsusc);
+      s.set_susc(state_i.get_susc() - newinf + newsusc);
+      s.set_inf(state_i.get_inf() + newinf - newrec);
+      s.set_rec(state_i.get_rec() + newrec - newsusc);
 
-      if (!state.check_pop())
-        throw "Error: population do not correspond to the sum of S,R,I!";
-      result.push_back(state);
+      if (!s.check_pop())
+        throw std::runtime_error{"Error: population do not correspond to the sum of S,R,I!\n"};
+      result.push_back(s);
     }
   //}
   return result;
