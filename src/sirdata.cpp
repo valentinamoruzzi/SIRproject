@@ -52,14 +52,14 @@ bool sirdata::check_pop() {
     return false;
 }
 
-std::string sirdata::toString() {
+std::string sirdata::toString() const {
 
   std::stringstream ss;
   ss << get_susc() << ";" << get_inf() << ";" << get_rec() << '\n';
   return ss.str();
 }
 
-bool sirdata::operator==(const sirdata &d1, const sirdata &d2) {
+bool operator== (const sirdata &d1, const sirdata &d2) {
   if (d1.get_susc() == d2.get_susc() && d1.get_inf() == d2.get_inf() &&
       d1.get_rec() == d2.get_rec())
     return true;

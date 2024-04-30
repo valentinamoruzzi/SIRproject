@@ -1,7 +1,6 @@
 #ifndef SIRPRINT_HPP
 #define SIRPRINT_HPP
 #define SFML_NO_DEPRECATED_WARNINGS
-#include "sirdata.hpp"
 #include "sirmodel.hpp"
 #include "sirmodelextended.hpp"
 #include "sirmanage.hpp"

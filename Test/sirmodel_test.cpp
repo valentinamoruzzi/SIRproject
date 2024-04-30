@@ -5,19 +5,16 @@
 #include "sirmodelextended.hpp"
 #include <vector>
 
-bool isequal(std::vector<sirdata> v1, std::vector<sirdata> v2){
-v1=v2;
+bool isequal(const std::vector<sirdata> &v1, const std::vector<sirdata> &v2){
 int i = 0;
-int dim = static_cast<int>(v1.size());
-while (v1[i] == v2[i] && i < dim)
-  i++;
-
-if (i == dim){
+for(i=0; i<v1.size() && v1[i]==v2[i]; i++);
+if (i == v1.size()){
   return true;
 }
 else
 {
   return false;
+}
 }
 
 
@@ -51,7 +48,7 @@ TEST_CASE("SIR model") {
 TEST_CASE("SIR model extended") {
   sirdata initial_state = {3980, 2, 0};
   sirmodelextended test_ex = sirmodelextended(0.6, 0.1, 0.5);
-  test_ex.set_state(&initial_state);
+  test_ex.set_state(initial_state);
   int duration{10};
   std::vector<sirdata> expected_data = {
       {3980, 2, 0},  {3979, 3, 0},  {3978, 4, 0},    {3976, 6, 0},
@@ -64,8 +61,8 @@ TEST_CASE("SIR model extended") {
 
 TEST_CASE("SIR model extended alpha tend to 0") {
   sirdata initial_state = {3980, 2, 0};
-  sirmodelextended *test_ex = new sirmodelextended(0.6, 0.1, 0);
-  test_ex->set_state(initial_state);
+  sirmodelextended test_ex = sirmodelextended(0.6, 0.1, 0);
+  test_ex.set_state(initial_state);
   int duration{10};
   std::vector<sirdata> expected_data = {
       {3980, 2, 0},  {3979, 3, 0},   {3978, 4, 0},    {3976, 6, 0},

@@ -9,7 +9,7 @@
 #include "sfml/plot.h"
 
 sirprint::sirprint(const sirmanage &c, const sirmodel &sir) : cfg(c.get_in_filepath()),sir(sir){}
-sirprint::sirprint(const sirmanage &c, const sirmodel &sir) : cfg(c.get_in_filepath()),sirs(sirs){}
+//sirprint::sirprint(const sirmanage &c, const sirmodel &sir) : cfg(c.get_in_filepath()),sirs(sirs){}
 
 void sirprint::print_tostdout(const std::vector<sirdata> &results, int duration) {
 

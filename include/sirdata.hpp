@@ -21,9 +21,10 @@ public:
   void set_rec(int recovered);
   int get_pop() const;
   bool check_pop();
-  std::string toString();
+  std::string toString() const;
   
 };
 
-bool operator==(const sirdata &d1, const sirdata &d2);
+bool operator== (const sirdata &d1, const sirdata &d2);
+
 #endif
