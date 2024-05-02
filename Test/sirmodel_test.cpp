@@ -4,19 +4,7 @@
 #include "sirmodel.hpp"
 #include "sirmodelextended.hpp"
 #include <vector>
-
-bool isequal(const std::vector<sirdata> &v1, const std::vector<sirdata> &v2){
-int i = 0;
-for(i=0; i<v1.size() && v1[i]==v2[i]; i++);
-if (i == v1.size()){
-  return true;
-}
-else
-{
-  return false;
-}
-}
-
+#include <iostream>
 
 TEST_CASE("Testing class sirdata ") {
   sirdata test_sm = {3980, 2, 0};
@@ -39,10 +27,10 @@ TEST_CASE("SIR model") {
   std::vector<sirdata> expected_data = {
       {3980, 2, 0},  {3979, 3, 0},   {3978, 4, 0},    {3976, 6, 0},
       {3973, 9, 0},  {3968, 14, 0},  {3960, 21, 1},   {3948, 31, 3},
-      {3930, 46, 6}, {3903, 69, 10}, {3863, 103, 16}, {3804, 152, 26}};
+      {3930, 46, 6}, {3903, 69, 10}, {3863, 103, 16}, };
 
   std::vector <sirdata> result = test_ml.generate_data(duration);
-  CHECK(isequal(result, expected_data) == true);
+  CHECK(result == expected_data);
 }
 
 TEST_CASE("SIR model extended") {
@@ -53,10 +41,10 @@ TEST_CASE("SIR model extended") {
   std::vector<sirdata> expected_data = {
       {3980, 2, 0},  {3979, 3, 0},  {3978, 4, 0},    {3976, 6, 0},
       {3973, 9, 0},  {3968, 14, 0}, {3960, 21, 1},   {3948, 31, 3},
-      {3931, 46, 5}, {3906, 69, 7}, {3869, 103, 10}, {3814, 153, 15}};
+      {3931, 46, 5}, {3906, 69, 7}, {3869, 103, 10}};
 
   std:: vector<sirdata> result = test_ex.generate_data(duration);
-  CHECK(isequal(result, expected_data) == true);
+  CHECK(result == expected_data);
 }
 
 TEST_CASE("SIR model extended alpha tend to 0") {
@@ -70,5 +58,5 @@ TEST_CASE("SIR model extended alpha tend to 0") {
       {3930, 46, 6}, {3903, 69, 10}, {3863, 103, 16}, {3804, 152, 26}};
 
   std::vector <sirdata> result = test_ex.generate_data(duration);
-  CHECK(isequal(result, expected_data) == true);
+  CHECK(result == expected_data);
 }
