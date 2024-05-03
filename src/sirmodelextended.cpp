@@ -36,7 +36,7 @@ std::vector<sirdata> sirmodelextended::generate_data( int duration) {
     result.push_back(s); 
 
     const int pop_now = s.get_pop(); // now
-    for (int i = 0; i < duration; i++) {
+    for (int i = 0; i < duration ; i++) {
 
       sirdata state_i = result.back();
       const int newinf =
@@ -53,7 +53,7 @@ std::vector<sirdata> sirmodelextended::generate_data( int duration) {
         throw std::runtime_error{"Error: population do not correspond to the sum of S,R,I!\n"};
       result.push_back(s);
     }
-  //}
+  
   return result;
 }
 

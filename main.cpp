@@ -1,8 +1,8 @@
-#include "sirdata.hpp"
-#include "sirmanage.hpp"
-#include "sirmodel.hpp"
-#include "sirmodelextended.hpp"
-#include "sirprint.hpp"
+#include "include/sirdata.hpp"
+#include "include/sirmanage.hpp"
+#include "include/sirmodel.hpp"
+#include "include/sirmodelextended.hpp"
+#include "include/sirprint.hpp"
 #include <cmath>
 #include <cstdio>
 #include <cstdlib>
@@ -19,7 +19,7 @@ int main() {
     double beta, gamma, alpha;
     int susc = 0, inf = 0, rec = 0;
     std::vector<sirdata> results;
-    sirmanage file("sirmodel.cfg");
+    sirmanage file("../../sirmodel.cfg");
 
     // LEGGI BETA e GAMMA e ALFA
     auto r = file.read_row_fromfile();

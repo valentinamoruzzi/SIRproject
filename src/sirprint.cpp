@@ -8,8 +8,8 @@
 #include <SFML/System.hpp>
 #include "sfml/plot.h"
 
-sirprint::sirprint(const sirmanage &c, const sirmodel &sir) : cfg(c.get_in_filepath()),sir(sir){}
-sirprint::sirprint(const sirmanage &c, const sirmodel &sir) : cfg(c.get_in_filepath()),sirs(sirs){}
+sirprint::sirprint(const sirmanage &c, const sirmodel &_sir) : cfg(c.get_in_filepath()),sir(_sir){}
+sirprint::sirprint(const sirmanage &c, const sirmodelextended &_sirs) : cfg(c.get_in_filepath()),sirs(_sirs){}
 
 void sirprint::print_tostdout(const std::vector<sirdata> &results, int duration) {
 

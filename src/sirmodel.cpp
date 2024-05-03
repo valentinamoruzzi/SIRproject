@@ -63,7 +63,7 @@ std::vector<sirdata> sirmodel::generate_data(int duration) {
     result.push_back(state); // serve l'asterisco perché solo state è gia un puntatore
 
     const int pop_now = state.get_pop(); // now
-    for (int i = 0; i < duration; i++) {
+    for (int i = 0; i < duration ; i++) {
 
       sirdata state_i = result.back();
       const int newinf =
