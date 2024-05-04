@@ -18,7 +18,7 @@ string(APPEND CMAKE_CXX_FLAGS " -Wall -Wextra")
 string(APPEND CMAKE_CXX_FLAGS_DEBUG " -fsanitize=address,undefined -fno-omit-frame-pointer")
 string(APPEND CMAKE_EXE_LINKER_FLAGS_DEBUG " -fsanitize=address,undefined -fno-omit-frame-pointer")
 
-add_executable(SIRproject main.cpp src/sirdata.cpp src/sirmodel.cpp src/sirmodelextended.cpp src/sirmanage.cpp src/sirprint.cpp src/sfml/plot.cpp  src/sfml/area.cpp src/sfml/axis.cpp src/sfml/curve.cpp src/sfml/grid.cpp  src/sfml/line.cpp )
+add_executable(SIRproject main.cpp src/sirdata.cpp src/sirdata.cpp src/sirmodel.cpp src/sirmodelextended.cpp src/sirmanage.cpp src/sirprint.cpp src/sfml/plot.cpp src/sfml/area.cpp src/sfml/axis.cpp src/sfml/curve.cpp src/sfml/grid.cpp  src/sfml/line.cpp  )
 target_include_directories(SIRproject PUBLIC "include/" "include/sfml")
 find_package(SFML REQUIRED COMPONENTS window system graphics) #serve a me che ho mac
 target_link_libraries(SIRproject PUBLIC sfml-window sfml-system sfml-graphics)

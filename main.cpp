@@ -1,8 +1,8 @@
-#include "include/sirdata.hpp"
-#include "include/sirmanage.hpp"
-#include "include/sirmodel.hpp"
-#include "include/sirmodelextended.hpp"
-#include "include/sirprint.hpp"
+#include "sirdata.hpp"
+#include "sirmanage.hpp"
+#include "sirmodel.hpp"
+#include "sirmodelextended.hpp"
+#include "sirprint.hpp"
 #include <cmath>
 #include <cstdio>
 #include <cstdlib>
@@ -17,7 +17,7 @@ int main() {
 
     int duration;
     double beta, gamma, alpha;
-    int susc = 0, inf = 0, rec = 0;
+    int susc, inf , rec ;
     std::vector<sirdata> results;
     sirmanage file("../../sirmodel.cfg");
 
