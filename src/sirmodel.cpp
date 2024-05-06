@@ -59,7 +59,7 @@ void sirmodel::set_R0() {
 
 std::vector<sirdata> sirmodel::generate_data(int duration) {
   std::vector<sirdata> result;
-  //if (state != NULL) {
+  
     result.push_back(state); // serve l'asterisco perché solo state è gia un puntatore
 
     const int pop_now = state.get_pop(); // now
@@ -79,7 +79,7 @@ std::vector<sirdata> sirmodel::generate_data(int duration) {
         throw std::runtime_error{"Error: population do not correspond to the sum of S,R,I!\n"};
       result.push_back(state);
     }
-  //}
+  
   return result;
 }
 

@@ -17,7 +17,7 @@ int main() {
 
     int duration;
     double beta, gamma, alpha;
-    int susc, inf , rec ;
+    int susc = 0, inf = 0 , rec = 0 ;
     std::vector<sirdata> results;
     sirmanage file("../../sirmodel.cfg");
 
