@@ -3,18 +3,19 @@
 #include "sirmodel.hpp"
 #include <iostream>
 
-class sirmodelextended : public sirmodel {
-private:
+class sirmodelextended : public sirmodel
+{
+ private:
   double alpha;
   static constexpr double alpha_default = 0.8;
 
-public:
+ public:
   sirmodelextended();
-  sirmodelextended( double a);
-  sirmodelextended( double b,  double g, double a);
-  double get_alpha() const ;
-  void set_alpha( double a);
-  std::vector<sirdata> generate_data( int duration);
+  sirmodelextended(double a);
+  sirmodelextended(double b, double g, double a);
+  double get_alpha() const;
+  void set_alpha(double a);
+  std::vector<sirdata> generate_data(int duration);
 };
 
 #endif
