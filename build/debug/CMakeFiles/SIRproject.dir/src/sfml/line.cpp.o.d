@@ -1,5 +1,4 @@
 CMakeFiles/SIRproject.dir/src/sfml/line.cpp.o: \
-  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/share/asan_blacklist.txt \
   /Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sfml/line.cpp \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cmath \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__config \

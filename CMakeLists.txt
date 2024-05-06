@@ -7,6 +7,7 @@ include(CTest)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # richiedi l'uso di C++17, senza estensioni non-standard offerte dal compilatore usato 
+set(CMAKE_CXX_COMPILER g++-13)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS ON)
@@ -22,4 +23,6 @@ add_executable(SIRproject main.cpp src/sirdata.cpp src/sirdata.cpp src/sirmodel.
 target_include_directories(SIRproject PUBLIC "include/" "include/sfml")
 find_package(SFML REQUIRED COMPONENTS window system graphics) #serve a me che ho mac
 target_link_libraries(SIRproject PUBLIC sfml-window sfml-system sfml-graphics)
+
+
 

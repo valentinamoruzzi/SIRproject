@@ -1,5 +1,4 @@
 CMakeFiles/SIRproject.dir/src/sfml/plot.cpp.o: \
-  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/share/asan_blacklist.txt \
   /Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sfml/plot.cpp \
   /Users/valentinamoruzzi/Documents/GitHub/SIRproject/include/sfml/plot.h \
   /Library/Frameworks/./SFML.framework/Headers/Graphics.hpp \

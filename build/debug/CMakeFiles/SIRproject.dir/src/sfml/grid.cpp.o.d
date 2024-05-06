@@ -1,5 +1,4 @@
 CMakeFiles/SIRproject.dir/src/sfml/grid.cpp.o: \
-  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/share/asan_blacklist.txt \
   /Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sfml/grid.cpp \
   /Users/valentinamoruzzi/Documents/GitHub/SIRproject/include/sfml/grid.h \
   /Library/Frameworks/./SFML.framework/Headers/Graphics.hpp \

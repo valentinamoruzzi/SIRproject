@@ -1,5 +1,4 @@
 CMakeFiles/SIRproject.dir/src/sirmanage.cpp.o: \
-  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/share/asan_blacklist.txt \
   /Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmanage.cpp \
   /Users/valentinamoruzzi/Documents/GitHub/SIRproject/include/sirmanage.hpp \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/iostream \

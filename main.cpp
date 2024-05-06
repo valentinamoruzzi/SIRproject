@@ -18,8 +18,8 @@ int main() {
     std::vector<sirdata> results;
 
   try {
-    sirmanage file("../../sirmodel.cfg");
-
+    sirmanage file("sirmodel.cfg");
+   
     // LEGGI BETA e GAMMA e ALFA
     auto r = file.read_row_fromfile();
     if (!sirmanage::isfloatnumber(r)) 
@@ -50,7 +50,7 @@ int main() {
     {
       alpha = atof(r.c_str());
     }
-
+  
     // LEGGI S,I,R
     r = file.read_row_fromfile();
      if (!sirmanage::isfloatnumber(r)) 
@@ -121,7 +121,7 @@ int main() {
       results = ex.generate_data(duration);
       sirprint sir_print(file, ex);
       sir_print.printdata(results, duration);
-    }
+    } 
 
   } catch (const std::exception &exc) {
     std::cerr << exc.what() << "\n";
@@ -129,5 +129,5 @@ int main() {
   }
   catch(...){
     std::cerr<<"unkown exception"<< "\n";
-  };
+  }; 
 }

@@ -27,7 +27,7 @@ SubmitInactivityTimeout:
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/usr/local/Cellar/cmake/3.29.1/bin/cmake" "/Users/valentinamoruzzi/Documents/GitHub/SIRproject"
+ConfigureCommand: "/usr/local/Cellar/cmake/3.29.2/bin/cmake" "/Users/valentinamoruzzi/Documents/GitHub/SIRproject"
 MakeCommand: /usr/local/Cellar/cmake/3.29.1/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
 DefaultCTestConfigurationType: Release
 

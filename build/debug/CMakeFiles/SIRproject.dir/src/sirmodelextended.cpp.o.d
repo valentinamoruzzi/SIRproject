@@ -1,5 +1,4 @@
 CMakeFiles/SIRproject.dir/src/sirmodelextended.cpp.o: \
-  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/share/asan_blacklist.txt \
   /Users/valentinamoruzzi/Documents/GitHub/SIRproject/src/sirmodelextended.cpp \
   /Users/valentinamoruzzi/Documents/GitHub/SIRproject/include/sirmodelextended.hpp \
   /Users/valentinamoruzzi/Documents/GitHub/SIRproject/include/sirmodel.hpp \
