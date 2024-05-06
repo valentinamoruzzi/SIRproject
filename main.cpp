@@ -12,13 +12,12 @@
 #include <vector>
 
 int main() {
-
-  try {
-
-    int duration;
+   int duration;
     double beta, gamma, alpha;
     int susc = 0, inf = 0 , rec = 0 ;
     std::vector<sirdata> results;
+
+  try {
     sirmanage file("../../sirmodel.cfg");
 
     // LEGGI BETA e GAMMA e ALFA

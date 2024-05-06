@@ -36,10 +36,11 @@ void sirmodel::set_state(const sirdata &s) {
 double sirmodel::get_beta() const { return beta; }
 void sirmodel::set_beta( double b) {
   if (b < 0 && b > 1)
-    throw std:: runtime_error{"Error: the value of beta is not correct\n"};
+    throw std::runtime_error{"Error: the value of beta is not correct\n"};
   else
     beta = b;
 }
+
 double sirmodel::get_gamma() const { return gamma; }
 void sirmodel::set_gamma( double g) {
   if (g < 0 && g > 1)
@@ -60,7 +61,7 @@ void sirmodel::set_R0() {
 std::vector<sirdata> sirmodel::generate_data(int duration) {
   std::vector<sirdata> result;
   
-    result.push_back(state); // serve l'asterisco perché solo state è gia un puntatore
+    result.push_back(state);
 
     const int pop_now = state.get_pop(); // now
     for (int i = 0; i < duration ; i++) {

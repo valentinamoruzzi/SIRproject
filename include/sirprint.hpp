@@ -12,13 +12,13 @@ private:
   sirmodel sir;
   sirmodelextended sirs;
   void print_tostdout(const std::vector<sirdata> &results, int n);
-  void print_tofile(const std::vector<sirdata> &results, int n);
+  void print_tofile( std::vector<sirdata> results, int n);
   void draw(sf::RenderTarget &target, sf::RenderStates states) const;
   void plot(const std::vector<sirdata> &results, int n);
   sf::plot::Plot plot_;
 
 public:
-  sirprint();
+  sirprint() = default;
   sirprint(const sirmanage &c, const sirmodel &model);
   sirprint(const sirmanage &c, const sirmodelextended &model);
   void printdata(const std::vector<sirdata> &results, int duration);

@@ -58,7 +58,7 @@ void sirmanage::set_output_type(const char &out_type) {
     output_type = out_type;
   }
   else {
-    throw std::runtime_error{ "Error: file path is empty\n"};
+    throw std::runtime_error{ "Error: output file type is empty\n"};
   }
 }
 
@@ -85,13 +85,17 @@ std::ofstream &sirmanage::get_sw() { return sw; }
 
 bool sirmanage:: isinteger(const std::string &s){
   std::string::const_iterator it = s.begin();
-  while(it != s.end() && std::isdigit(*it)) ++it;
+  while(it != s.end() && std::isdigit(*it)) {
+   ++it;
+  }
   return !s.empty() && it == s.end();
 }
 
 bool sirmanage:: isfloatnumber(const std::string &s){
   std::string::const_iterator it = s.begin();
-  while((it != s.end() && (std::isdigit(*it))) || *it == '.') ++it;
+  while((it != s.end() && (std::isdigit(*it))) || *it == '.'){
+   ++it;
+  }
   return !s.empty() && it == s.end();
 }
 

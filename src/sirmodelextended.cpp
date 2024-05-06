@@ -2,20 +2,17 @@
 #include <vector>
 
 sirmodelextended::sirmodelextended() {
-
   set_alpha(alpha_default);
   set_R0();
 }
 
 sirmodelextended::sirmodelextended(double a) {
-
   set_alpha(a);
   set_R0();
 }
 
 sirmodelextended::sirmodelextended(double b, double g,
                                    double a) {
-
   set_beta(b);
   set_gamma(g);
   set_alpha(a);
