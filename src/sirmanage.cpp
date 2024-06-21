@@ -4,7 +4,7 @@
 #include <string>
 
 sirmanage::sirmanage()
-    : sirmanage("sirmodel.cfg")
+    : sirmanage("../../sirmodel.cfg")
 {}
 
 sirmanage::sirmanage(const std::string& in_filep)

@@ -59,9 +59,9 @@ TEST_CASE("SIR model extended alpha tend to 0")
   test_ex.set_state(initial_state);
   int duration{10};
   std::vector<sirdata> expected_data = {
-      {3980, 2, 0},  {3979, 3, 0},   {3978, 4, 0},    {3976, 6, 0},
-      {3973, 9, 0},  {3968, 14, 0},  {3960, 21, 1},   {3948, 31, 3},
-      {3930, 46, 6}, {3903, 69, 10}, {3863, 103, 16} };
+      {3980, 2, 0},  {3979, 3, 0},   {3978, 4, 0},   {3976, 6, 0},
+      {3973, 9, 0},  {3968, 14, 0},  {3960, 21, 1},  {3948, 31, 3},
+      {3930, 46, 6}, {3903, 69, 10}, {3863, 103, 16}};
 
   std::vector<sirdata> result = test_ex.generate_data(duration);
   CHECK(result == expected_data);

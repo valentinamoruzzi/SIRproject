@@ -21,19 +21,14 @@ void sirprint::print_tostdout(const std::vector<sirdata>& results, int duration)
 {
   int pop = results[0].get_susc() + results[0].get_inf() + results[0].get_rec();
 
-  std::cout << "|" << std::setw(5) << "Time"
-            << "|" << std::setw(5) << "Susc"
-            << "|" << std::setw(5) << "Inf"
-            << "|" << std::setw(5) << "Rec"
-            << "|" << std::setw(5) << "Beta"
-            << "|" << std::setw(5) << "Gamma";
+  std::cout << "|" << std::setw(5) << "Time" << "|" << std::setw(5) << "Susc"
+            << "|" << std::setw(5) << "Inf" << "|" << std::setw(5) << "Rec"
+            << "|" << std::setw(5) << "Beta" << "|" << std::setw(5) << "Gamma";
 
   if (cfg.get_modeltype() == "sirmodelextended")
     std::cout << "|" << std::setw(5) << "Alpha";
 
-  std::cout << "|" << std::setw(5) << "Pop"
-            << "|"
-            << "\n";
+  std::cout << "|" << std::setw(5) << "Pop" << "|" << "\n";
   for (int day = 0; day < duration; day++) {
     std::cout << "|" << std::setw(5) << day << "|" << std::setw(5)
               << results[day].get_susc() << "|" << std::setw(5)
@@ -49,16 +44,10 @@ void sirprint::print_tostdout(const std::vector<sirdata>& results, int duration)
       std::cout << "|" << std::setw(5) << sirs.get_gamma();
     if (cfg.get_modeltype() == "sirmodelextended")
       std::cout << "|" << std::setw(5) << sirs.get_alpha();
-    std::cout << "|" << std::setw(5) << pop << "|"
-              << "\n";
+    std::cout << "|" << std::setw(5) << pop << "|" << "\n";
   }
 }
-void sirprint::print_tofile(std::vector<sirdata> results, int duration)
-{
-  for (int i = 0; i < duration; i++) {
-    cfg.get_sw() << results[i].toString() << "\n";
-  }
-}
+
 void sirprint::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
   target.draw(plot_, states);
@@ -118,8 +107,6 @@ void sirprint::printdata(const std::vector<sirdata>& results, int duration)
   std::cout << cfg.get_output_type() << "\n";
   if (cfg.get_output_type() == 'S') {
     print_tostdout(results, duration);
-  } else if (cfg.get_output_type() == 'F') {
-    print_tofile(results, duration);
   } else if (cfg.get_output_type() == 'P') {
     plot(results, duration);
   } else {

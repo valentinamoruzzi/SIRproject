@@ -1,4 +1,7 @@
+#specifica la versione minima di cmake richiesta
 cmake_minimum_required(VERSION 3.16)
+
+#nome del progetto
 project(SIRproject VERSION 0.1.0)
 
 # abilita il supporto per i test, tra cui l'opzione BUILD_TESTING usata sotto
@@ -23,6 +26,7 @@ add_executable(SIRproject main.cpp src/sirdata.cpp src/sirdata.cpp src/sirmodel.
 target_include_directories(SIRproject PUBLIC "include/" "include/sfml")
 find_package(SFML REQUIRED COMPONENTS window system graphics) #serve a me che ho mac
 target_link_libraries(SIRproject PUBLIC sfml-window sfml-system sfml-graphics)
+
 
 
 

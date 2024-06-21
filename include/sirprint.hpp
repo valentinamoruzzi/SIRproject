@@ -13,7 +13,6 @@ class sirprint : public sf::Drawable
   sirmodel sir;
   sirmodelextended sirs;
   void print_tostdout(const std::vector<sirdata>& results, int n);
-  void print_tofile(std::vector<sirdata> results, int n);
   void draw(sf::RenderTarget& target, sf::RenderStates states) const;
   void plot(const std::vector<sirdata>& results, int n);
   sf::plot::Plot plot_;

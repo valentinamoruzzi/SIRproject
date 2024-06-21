@@ -45,21 +45,21 @@ int main()
 
     // LEGGI S,I,R
     r = file.read_row_fromfile();
-    if (!sirmanage::isfloatnumber(r)) {
+    if (!sirmanage::isinteger(r)) {
       throw std::runtime_error{"Error: Susc is not a valid number \n"};
     } else {
       susc = std::stoi(r.c_str(), 0, 10);
     }
 
     r = file.read_row_fromfile();
-    if (!sirmanage::isfloatnumber(r)) {
+    if (!sirmanage::isinteger(r)) {
       throw std::runtime_error{"Error: Inf is not a valid number \n"};
     } else {
       inf = std::stoi(r.c_str(), 0, 10);
     }
 
     r = file.read_row_fromfile();
-    if (!sirmanage::isfloatnumber(r)) {
+    if (!sirmanage::isinteger(r)) {
       throw std::runtime_error{"Error: Rec is not a valid number \n"};
     } else {
       rec = std::stoi(r.c_str(), 0, 10);
@@ -67,7 +67,7 @@ int main()
 
     // LEGGI DURATA
     r = file.read_row_fromfile();
-    if (!sirmanage::isfloatnumber(r)) {
+    if (!sirmanage::isinteger(r)) {
       throw std::runtime_error{"Error: duration is not a valid number \n"};
     } else {
       duration = std::stoi(r.c_str(), 0, 10);
@@ -105,7 +105,6 @@ int main()
     std::cerr << exc.what() << "\n";
     return EXIT_FAILURE;
   } catch (...) {
-    std::cerr << "unkown exception"
-              << "\n";
+    std::cerr << "unkown exception" << "\n";
   };
 }
