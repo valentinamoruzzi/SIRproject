@@ -1,4 +1,6 @@
 #include "sirmanage.hpp"
+#include "sirdata.hpp"
+#include "sirmodel.hpp"
 #include <algorithm>
 #include <fstream>
 #include <string>
@@ -78,17 +80,45 @@ void sirmanage::set_output_type(const char& out_type)
 
 std::string sirmanage::read_row_fromfile()
 {
+  std::string var;
   std::string row;
   int pos = -1; // riguarda
-
-  if (sr.is_open()) {
+  
+  /*if (sr.is_open()) {
     getline(sr, row);
     pos = row.find("=");
     if (pos != -1) {
       row.erase(remove(row.begin(), row.end(), ' '), row.end());
       row = row.substr(pos);
       return row;
+    }*/
+
+    if(sr.is_open()){
+    getline(sr, row);
+    pos = row.find("=");
+    if (pos!= -1){
+        row.erase(remove(row.begin(), row.end(),''),row.end());
+        var = row.substr(0, pos);
+        if(var == "Output_type")
+            row = get_output_type()
+        else if(var == "Beta" )
+            row = sirmodel::get_beta();
+        else if(var == "Gamma")
+            row = sirmodel::get_gamma();
+        else if(var == "Alpha")
+            row = sirmodel::get_alpha();
+        else if(var == "Susc")
+            row = sirdata::get_susc();
+        else if(var == "Inf")
+            row = sirdata::get_inf();
+        else if(var == "Rec")
+            row = sirdata::get_rec();
+        else if(var == "Duration")
+            row = duration;
+        else if(var == "sirmodel")
+            row = get_modeltype();
     }
+
 
     else
       return "";
